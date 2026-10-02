@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modelos de negocio | A Granel 24/7</title>
+  <meta name="description" content="Inicia tu negocio, complementa tu purificadora, veterinaria, lavandería o tienda de abarrotes, o adquiere una franquicia A Granel 24/7.">
+  <link rel="icon" href="assets/img/logo-color.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <!-- HERO (carrusel de modelos) -->
+    <section class="hero carousel carousel--warm models-carousel" style="margin-top:calc(43 * var(--u))" data-carousel aria-label="Modelos de negocio">
+      <div class="slides">
+        <div class="slide is-active"><img src="assets/img/banner-modelo-vet.webp" alt="Modelo de negocio para veterinarias"></div>
+        <div class="slide"><img src="assets/img/banner-modelo-lav.webp" alt="Modelo de negocio para lavanderías" loading="lazy"></div>
+        <div class="slide"><img src="assets/img/banner-modelo-aba.webp" alt="Modelo de negocio para tiendas de abarrotes" loading="lazy"></div>
+        <div class="slide"><img src="assets/img/banner-modelo-pur.webp" alt="Modelo de negocio para purificadoras" loading="lazy"></div>
+      </div>
+      <div class="slide-text">
+        <div class="inner">
+          <h1 class="h-hero">Un modelo de negocio <br>para cada objetivo</h1>
+          <p class="h-hero-sub">Encuentra el modelo de negocio <br>que mejor se adapta a tu proyecto</p>
+        </div>
+      </div>
+      <button class="carousel-arrow prev" aria-label="Anterior" data-icon="left"></button>
+      <button class="carousel-arrow next" aria-label="Siguiente" data-icon="right"></button>
+      <div class="carousel-dots"></div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="section reveal">
+      <div class="container center">
+        <h2 class="h-section">Conoce nuestros equipos</h2>
+        <p class="h-sub">Soluciones desarrolladas para diferentes necesidades y modelos de negocio</p>
+      </div>
+      <div class="panel-width models-panel" data-models>
+        <div class="model-cats">
+          <a class="model-cat" href="#inicia" data-target="inicia">
+            <img src="assets/img/cat-inicia.webp" alt="" loading="lazy">
+            <h3>Inicia <br>tu negocio</h3>
+            <span class="go" data-icon="arrow"></span>
+          </a>
+          <a class="model-cat is-active" href="#complementa" data-target="complementa">
+            <img src="assets/img/cat-complementa.webp" alt="" loading="lazy">
+            <h3>Complementa <br>tu negocio</h3>
+            <span class="go" data-icon="arrow"></span>
+          </a>
+          <a class="model-cat" href="franquicias.html" data-target="franquicias" data-link>
+            <img src="assets/img/cat-franquicias.webp" alt="" loading="lazy">
+            <h3>Franquicias</h3>
+            <span class="go" data-icon="arrow"></span>
+          </a>
+        </div>
+
+        <div class="model-list">
+          <div class="pane is-active" data-pane="complementa">
+            <div class="model-item">
+              <div>
+                <h3>Complementa <br>tu purificadora</h3>
+                <p>Con un equipo automatizado <br>kiosko dúo agua y hielo <br>o una ventana de agua</p>
+                <a class="btn btn-sm" href="equipos.html#catalogo">Ver más</a>
+              </div>
+              <div class="thumb"><img src="assets/img/modelo-purificadora.webp" alt="Purificadora con equipo A Granel 24/7" loading="lazy"></div>
+            </div>
+            <div class="model-item">
+              <div>
+                <h3>Complementa <br>tu veterinaria</h3>
+                <p>Con un equipo automatizado <br>de venta de croquetas a granel <br>con hasta seis productos</p>
+                <a class="btn btn-sm" href="equipos.html#catalogo">Ver más</a>
+              </div>
+              <div class="thumb"><img src="assets/img/modelo-veterinaria.webp" alt="Veterinaria con equipo de croquetas" loading="lazy"></div>
+            </div>
+            <div class="model-item">
+              <div>
+                <h3>Complementa <br>tu lavandería</h3>
+                <p>Con un equipo automatizado <br>de venta de productos de limpieza <br>desde 6 a 12 productos</p>
+                <a class="btn btn-sm" href="equipos.html#catalogo">Ver más</a>
+              </div>
+              <div class="thumb"><img src="assets/img/modelo-lavanderia.webp" alt="Lavandería con equipo de productos de limpieza" loading="lazy"></div>
+            </div>
+            <div class="model-item">
+              <div>
+                <h3>Complementa <br>tu tienda de abarrotes</h3>
+                <p>Con un equipo automatizado <br>kiosko dúo agua y hielo <br>o una ventana de agua</p>
+                <a class="btn btn-sm" href="equipos.html#catalogo">Ver más</a>
+              </div>
+              <div class="thumb"><img src="assets/img/modelo-abarrotes.webp" alt="Tienda de abarrotes con kiosko de agua y hielo" loading="lazy"></div>
+            </div>
+          </div>
+
+          <div class="pane" data-pane="inicia">
+            <div class="model-item">
+              <div>
+                <h3>Kiosko <br>de agua</h3>
+                <p>Sistema de purificación de agua <br>y ventana automatizada de agua <br>empotrable en muro</p>
+                <a class="btn btn-sm" href="equipos.html#catalogo">Ver más</a>
+              </div>
+              <div class="thumb"><img src="assets/img/equipo-kiosko-agua.webp" alt="Kiosko de agua" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+            </div>
+            <div class="model-item">
+              <div>
+                <h3>Kiosko dúo <br>hielo &amp; agua</h3>
+                <p>Sistema de purificación de agua <br>y ventana automatizada de hielo y agua <br>empotrable en muro</p>
+                <a class="btn btn-sm" href="equipos.html#catalogo">Ver más</a>
+              </div>
+              <div class="thumb"><img src="assets/img/equipo-kiosko-duo.webp" alt="Kiosko dúo hielo y agua" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+            </div>
+            <div class="model-item">
+              <div>
+                <h3>Calcula <br>tu inversión</h3>
+                <p>Conoce el retorno estimado <br>de tu negocio con nuestra <br>calculadora ROI</p>
+                <a class="btn btn-sm" href="calculadora.html" data-open-calculator>Calcular</a>
+              </div>
+              <div class="thumb"><img src="assets/img/paso-ingresos.webp" alt="" loading="lazy" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="box bg-sky faq reveal">
+      <img class="float-icon" src="assets/img/icono-preguntas.webp" alt="" loading="lazy">
+      <h2 class="h-section">Preguntas frecuentes</h2>
+      <div class="accordion">
+        <div class="acc-item open">
+          <button class="acc-q">¿Cuánto espacio necesito para instalar un equipo?</button>
+          <div class="acc-a"><div><div class="inner">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+          </div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q">¿Los equipos pueden operar las 24 horas sin personal?</button>
+          <div class="acc-a"><div><div class="inner"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q">¿Los equipos requieren mantenimiento frecuente?</button>
+          <div class="acc-a"><div><div class="inner"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q">¿A Granel 24/7 me ayuda a elegir el equipo adecuado?</button>
+          <div class="acc-a"><div><div class="inner"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div></div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-q">¿Puedo combinar diferentes equipos para crear mi propio modelo de negocio?</button>
+          <div class="acc-a"><div><div class="inner"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <div data-contact-form="default"></div>
+  </main>
+
+  <div data-footer></div>
+</body>
+</html>

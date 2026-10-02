@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Granel 24/7 | Equipos vending para generar ingresos 24/7</title>
+  <meta name="description" content="Fabricamos equipos vending para la venta de productos a granel de primera necesidad: agua, hielo, limpieza, croquetas y más. Más de 14 años y +1200 equipos instalados en México.">
+  <link rel="icon" href="assets/img/logo-color.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero hero--home">
+      <video class="hero-bg" data-hero-video data-desktop="assets/video/hero.mp4" data-mobile="assets/video/hero-movil.mp4" poster="assets/video/hero-poster.jpg" muted loop playsinline autoplay preload="none" aria-hidden="true"></video>
+      <div class="hero-content">
+        <h1 class="h-hero">Equipos vending <br>para generar <br>ingresos 24/7</h1>
+        <p class="h-hero-sub">Fabricamos equipos para la venta <br>de productos a granel <br>de primera necesidad</p>
+      </div>
+    </section>
+
+    <!-- INGENIERÍA, EXPERIENCIA Y RESPALDO -->
+    <section class="section reveal">
+      <div class="container center">
+        <h2 class="h-section">Ingeniería, experiencia y respaldo</h2>
+        <p class="h-sub">Más de 14 años desarrollando soluciones vending <br>para empresas, emprendedores y proyectos de alto crecimiento.</p>
+      </div>
+      <div class="diff-grid">
+        <div class="diff-card" data-flip>
+          <img class="diff-icon" src="assets/img/dif-ingenieria.webp" alt="" loading="lazy">
+          <h3>Ingeniería <br>y fabricación propia</h3>
+          <p>Desarrollamos tecnología propia para fabricar equipos confiables y de alto desempeño.</p>
+        </div>
+        <div class="diff-card" data-flip>
+          <img class="diff-icon" src="assets/img/dif-creadores.webp" alt="" loading="lazy">
+          <h3>Creadores del <br>modelo de negocio</h3>
+          <p>Diseñamos modelos de negocio automatizados para la venta de productos a granel.</p>
+        </div>
+        <div class="diff-card" data-flip>
+          <img class="diff-icon" src="assets/img/dif-lideres.webp" alt="" loading="lazy">
+          <h3>Líderes <br>del mercado</h3>
+          <p>Más de 1200 equipos instalados en todo México respaldan nuestra experiencia.</p>
+        </div>
+        <div class="diff-card" data-flip>
+          <img class="diff-icon" src="assets/img/dif-escalabilidad.webp" alt="" loading="lazy">
+          <h3>Escalabilidad <br>empresarial</h3>
+          <p>Inicia con un equipo y crece sumando nuevas categorías y ubicaciones.</p>
+        </div>
+      </div>
+      <div class="diff-cta"><a class="btn btn-lg" href="nosotros.html">Conoce más sobre nosotros</a></div>
+    </section>
+
+    <!-- UN MODELO DE NEGOCIO PARA CADA OBJETIVO -->
+    <section class="carousel carousel--warm models-carousel reveal" data-carousel aria-label="Modelos de negocio">
+      <div class="slides">
+        <div class="slide is-active"><img src="assets/img/banner-modelo-vet.webp" alt="Modelo de negocio para veterinarias"></div>
+        <div class="slide"><img src="assets/img/banner-modelo-lav.webp" alt="Modelo de negocio para lavanderías" loading="lazy"></div>
+        <div class="slide"><img src="assets/img/banner-modelo-aba.webp" alt="Modelo de negocio para tiendas de abarrotes" loading="lazy"></div>
+        <div class="slide"><img src="assets/img/banner-modelo-pur.webp" alt="Modelo de negocio para purificadoras" loading="lazy"></div>
+      </div>
+      <div class="slide-text">
+        <div class="inner">
+          <h2 class="h-hero">Un modelo de negocio <br>para cada objetivo</h2>
+          <p class="h-hero-sub">Encuentra el modelo de negocio <br>que mejor se adapta a tu proyecto</p>
+          <a class="btn btn-lg" href="modelos.html">Conoce más</a>
+        </div>
+      </div>
+      <button class="carousel-arrow prev" aria-label="Anterior" data-icon="left"></button>
+      <button class="carousel-arrow next" aria-label="Siguiente" data-icon="right"></button>
+      <div class="carousel-dots"></div>
+    </section>
+
+    <!-- NUESTROS EQUIPOS -->
+    <section class="section reveal">
+      <div class="container center">
+        <h2 class="h-section">Nuestros equipos</h2>
+        <p class="h-sub">Soluciones desarrolladas para diferentes necesidades y modelos de negocio</p>
+      </div>
+      <div class="cat-tabs">
+        <button data-tab="kioskos">Kioskos</button>
+        <button data-tab="ventanas">Ventanas</button>
+        <button data-tab="vending">Vending</button>
+      </div>
+      <div class="panel-width catalog" data-catalog="todos">
+        <div class="chips" role="tablist" aria-label="Filtrar equipos"></div>
+        <div class="track-wrap">
+          <div class="track"></div>
+          <p class="catalog-empty">Muy pronto tendremos equipos en esta categoría. <a href="#formulario" style="text-decoration:underline">Contáctanos</a> para más información.</p>
+          <div class="track-arrows">
+            <button class="round-arrow" data-prev aria-label="Anterior" data-icon="left"></button>
+            <button class="round-arrow" data-next aria-label="Siguiente" data-icon="right"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGRANEL 24-7 EN ACCIÓN -->
+    <section class="box bg-grad action reveal">
+      <h2 class="h-section white">Agranel 24-7 en acción</h2>
+      <p class="h-sub">Síguenos para descubrir contenido especializado y novedades <br>sobre nuestros modelos de negocio automatizados</p>
+      <div class="reels" data-reels>
+        <button class="round-arrow outline-white prev" data-prev aria-label="Anterior" data-icon="left"></button>
+        <div class="reels-stage">
+          <button class="reel" data-video="assets/video/accion-01.mp4" aria-label="Ver video 1 de A Granel 24/7 en acción">
+            <video src="assets/video/accion-01.mp4" poster="assets/video/accion-01.jpg" muted loop playsinline preload="none"></video>
+            <span class="play" data-icon="play"></span><span class="sound" data-icon="sound"></span>
+          </button>
+          <button class="reel" data-video="assets/video/accion-02.mp4" aria-label="Ver video 2 de A Granel 24/7 en acción">
+            <video src="assets/video/accion-02.mp4" poster="assets/video/accion-02.jpg" muted loop playsinline preload="none"></video>
+            <span class="play" data-icon="play"></span><span class="sound" data-icon="sound"></span>
+          </button>
+          <button class="reel" data-video="assets/video/accion-03.mp4" aria-label="Ver video 3 de A Granel 24/7 en acción">
+            <video src="assets/video/accion-03.mp4" poster="assets/video/accion-03.jpg" muted loop playsinline preload="none"></video>
+            <span class="play" data-icon="play"></span><span class="sound" data-icon="sound"></span>
+          </button>
+        </div>
+        <button class="round-arrow outline-white next" data-next aria-label="Siguiente" data-icon="right"></button>
+      </div>
+    </section>
+
+    <!-- IMPULSANDO NEGOCIOS EN TODO MÉXICO -->
+    <section class="section reach reveal">
+      <div class="map-wrap" data-map><video class="map" src="assets/video/mapa-flecha.webm" poster="assets/img/mapa-mexico.webp" autoplay muted loop playsinline preload="auto" aria-label="Mapa de México con flecha de crecimiento girando"></video></div>
+      <div class="text">
+        <h2 class="h-section">Impulsando negocios <br>en todo México</h2>
+        <p class="h-sub">Acompañamos proyectos <br>en todo el país con soluciones, <br>soporte técnico y experiencia <br>especializada</p>
+        <div class="stat"><strong data-count="1200" data-prefix="+">+1200</strong><span>Equipos instalados</span></div>
+        <div class="stat"><strong data-count="14" data-prefix="+" data-suffix=" años">+14 años</strong><span>Desarrollando soluciones</span></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="box bg-sky testimonials reveal">
+      <img class="float-icon" src="assets/img/icono-testimonios.webp" alt="" loading="lazy">
+      <div class="grid">
+        <div>
+          <h2 class="h-section">Cada proyecto <br>cuenta una <br>historia</h2>
+          <p class="h-sub">Conoce la experiencia de quienes <br>han impulsado el crecimiento de <br>sus negocios con nuestros equipos <br>vending de productos a granel</p>
+        </div>
+        <div data-track>
+          <div class="track testi-track">
+            <article class="testi-card">
+              <img src="assets/img/testimonio-01.webp" alt="Cliente junto a su kiosko de hielo y agua" loading="lazy">
+              <div class="body">
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</blockquote>
+                <p class="who">Jose A. Martínez<b>Tabasco</b></p>
+              </div>
+            </article>
+            <article class="testi-card">
+              <img src="assets/img/testimonio-01.webp" alt="Cliente junto a su kiosko de hielo y agua" loading="lazy">
+              <div class="body">
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</blockquote>
+                <p class="who">Jose A. Martínez<b>Tabasco</b></p>
+              </div>
+            </article>
+            <article class="testi-card">
+              <img src="assets/img/testimonio-01.webp" alt="Cliente junto a su kiosko de hielo y agua" loading="lazy">
+              <div class="body">
+                <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</blockquote>
+                <p class="who">Jose A. Martínez<b>Tabasco</b></p>
+              </div>
+            </article>
+          </div>
+          <div class="track-arrows">
+            <button class="round-arrow outline" data-prev aria-label="Anterior" data-icon="left"></button>
+            <button class="round-arrow outline" data-next aria-label="Siguiente" data-icon="right"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div data-contact-form="default"></div>
+  </main>
+
+  <div data-footer></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equipos vending | A Granel 24/7</title>
+  <meta name="description" content="Kioskos, ventanas y equipos vending para la venta automatizada de agua, hielo, productos de limpieza, croquetas y leguminosas.">
+  <link rel="icon" href="assets/img/logo-color.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <div data-header></div>
+
+  <main>
+    <!-- HERO (carrusel) -->
+    <section class="hero hero-overlay carousel" data-carousel aria-label="Equipos en distintos negocios">
+      <div class="slides">
+        <div class="slide is-active"><img src="assets/img/banner-equipos-01.webp" alt="Equipo de hielo en tienda de abarrotes"></div>
+        <div class="slide"><img src="assets/img/banner-equipos-02.webp" alt="Equipo de croquetas en veterinaria" loading="lazy"></div>
+        <div class="slide"><img src="assets/img/banner-equipos-03.webp" alt="Equipo de limpieza en lavandería" loading="lazy"></div>
+        <div class="slide"><img src="assets/img/banner-equipos-04.webp" alt="Kiosko de hielo y agua en purificadora" loading="lazy"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="h-hero">Encuentra el equipo <br>para tu negocio</h1>
+        <p class="h-hero-sub">Explora nuestro catálogo de equipos <br>y encuentra nuevas posibilidades <br>para tu negocio</p>
+      </div>
+      <div class="carousel-dots"></div>
+    </section>
+
+    <!-- CONOCE NUESTROS EQUIPOS -->
+    <section class="section reveal" id="catalogo">
+      <div class="container center">
+        <h2 class="h-section">Conoce nuestros equipos</h2>
+        <p class="h-sub">Soluciones desarrolladas para diferentes necesidades y modelos de negocio</p>
+      </div>
+      <div class="cat-tabs">
+        <button data-tab="kioskos">Kioskos</button>
+        <button data-tab="ventanas">Ventanas</button>
+        <button data-tab="vending">Vending</button>
+      </div>
+      <div class="panel-width catalog" data-catalog="kioskos">
+        <div class="chips" role="tablist" aria-label="Filtrar equipos"></div>
+        <div class="track-wrap">
+          <div class="track"></div>
+          <p class="catalog-empty">Muy pronto tendremos equipos en esta categoría. <a href="#formulario" style="text-decoration:underline">Contáctanos</a> para más información.</p>
+          <div class="track-arrows">
+            <button class="round-arrow" data-prev aria-label="Anterior" data-icon="left"></button>
+            <button class="round-arrow" data-next aria-label="Siguiente" data-icon="right"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿CÓMO COMENZAR TU NEGOCIO? -->
+    <section class="section reveal">
+      <div class="container center">
+        <h2 class="h-section">¿Cómo comenzar tu negocio?</h2>
+        <p class="h-sub">Da el primer paso hacia un negocio automatizado. Te acompañamos <br>desde la elección del equipo hasta su puesta en operación.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="circle"><img src="assets/img/paso-elige.webp" alt="" loading="lazy"></div><h3>Elige tu equipo <br>vending</h3></div>
+        <div class="step"><div class="circle"><img src="assets/img/paso-instalacion.webp" alt="" loading="lazy"></div><h3>Instalación en <br>tu ubicación</h3></div>
+        <div class="step"><div class="circle"><img src="assets/img/paso-ingresos.webp" alt="" loading="lazy"></div><h3>Genera ingresos <br>24/7 sin personal</h3></div>
+        <div class="step"><div class="circle"><img src="assets/img/paso-monitorea.webp" alt="" loading="lazy"></div><h3>Monitorea desde <br>tu celular</h3></div>
+      </div>
+      <div class="steps-cta"><a class="btn btn-lg" href="#formulario">¡Quiero comenzar mi negocio!</a></div>
+    </section>
+
+    <!-- CALCULADORA -->
+    <section class="calc-banner reveal">
+      <img class="hero-bg" src="assets/img/banner-calculadora.webp" alt="" loading="lazy">
+      <div class="hero-content">
+        <h2 class="h-hero">Calcula <br>el potencial <br>de tu inversión</h2>
+        <a class="btn btn-orange" href="calculadora.html" data-open-calculator>Prueba nuestra calculadora</a>
+      </div>
+    </section>
+
+    <div data-contact-form="default"></div>
+  </main>
+
+  <div data-footer></div>
+</body>
+</html>
