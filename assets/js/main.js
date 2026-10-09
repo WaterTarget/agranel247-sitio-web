@@ -117,7 +117,7 @@ function renderContactForms() {
         <div class="row"><label for="f-nombre-${variant}">Nombre y apellido:</label><input id="f-nombre-${variant}" name="nombre" required autocomplete="name" placeholder="Escribe tu nombre completo"></div>
         ${extra ? `<div class="row"><label for="f-correo-${variant}">Correo electrónico:</label><input id="f-correo-${variant}" name="correo" type="email" required autocomplete="email" placeholder="nombre@empresa.com"></div>` : ""}
         <div class="row"><label for="f-tel-${variant}">WhatsApp:</label><input id="f-tel-${variant}" name="whatsapp" type="tel" inputmode="numeric" required pattern="[0-9]{10}" maxlength="10" autocomplete="tel-national" placeholder="Escribe los 10 dígitos de tu teléfono"></div>
-        ${extra ? `<div class="row"><label for="f-giro-${variant}">Giro de tu empresa:</label><input id="f-giro-${variant}" name="giro" placeholder="Ej. Fabricación de productos de limpieza"></div>` : ""}
+        ${variant === "distribuidor" ? `<div class="row"><label for="f-giro-${variant}">Giro de tu empresa:</label><input id="f-giro-${variant}" name="giro" placeholder="Ej. Fabricación de productos de limpieza"></div>` : ""}
         <div class="row"><label for="f-estado-${variant}">Estado:</label><select id="f-estado-${variant}" name="estado" required><option value="" disabled selected>Aguascalientes</option>${opts}</select></div>
         <div class="row"><label for="f-ciudad-${variant}">Ciudad:</label><input id="f-ciudad-${variant}" name="ciudad" required placeholder="Ej. Zapopan"></div>
         <div class="row top"><label for="f-msg-${variant}">Mensaje:</label><textarea id="f-msg-${variant}" name="mensaje" placeholder="Ej. Hola! Quiero más información sobre los equipos vending."></textarea></div>
