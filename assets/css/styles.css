@@ -471,6 +471,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .modal.video .bar strong { display: none; }
 .modal.video .close { background: rgba(0,0,0,.5); }
 .modal video { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
+
+/* Calculadora ROI: página completa debajo del menú (la altura la ajusta main.js) */
+.calc-page { margin: calc(43 * var(--u)) var(--edge) 0; }
+.calc-frame { display: block; width: 100%; height: 2600px; border: 0; background: var(--white); }
 @keyframes pop { from { opacity: 0; transform: translateY(24px) scale(.96); } to { opacity: 1; transform: none; } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 
@@ -500,8 +504,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .model-item h3 { color: var(--navy); font-weight: 800; text-transform: uppercase; font-size: calc(22 * var(--u)); line-height: 1.2; }
 .model-item p { margin-top: calc(14 * var(--u)); font-size: calc(18 * var(--u)); line-height: 1.4; color: var(--text); }
 .model-item .btn { margin-top: calc(16 * var(--u)); float: right; margin-right: calc(10 * var(--u)); }
-.model-item .thumb { aspect-ratio: 1; border-radius: var(--radius-md); background: var(--sky); display: grid; place-items: center; overflow: hidden; }
-.model-item .thumb img { width: 108%; max-width: none; }
+/* El local completo dentro de su recuadro, con aire a los lados (sin recortarse contra el borde) */
+.model-item .thumb { aspect-ratio: 1; border-radius: var(--radius-md); background: var(--sky); display: grid; place-items: center; }
+.model-item .thumb img { width: 90%; height: auto; }
 
 /* FAQ */
 .faq { position: relative; margin: calc(230 * var(--u)) var(--edge) 0; padding: calc(70 * var(--u)) 0 calc(140 * var(--u)); }
@@ -567,15 +572,25 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ==========================================================================
    Contacto
    ========================================================================== */
-.contact-info { width: var(--container); margin: calc(190 * var(--u)) auto 0; display: grid; grid-template-columns: calc(714 * var(--u)) 1fr; gap: calc(54 * var(--u)); align-items: stretch; }
+/* Mapa 714 × 715 del diseño; la tarjeta inicia 84 más abajo y termina al ras del mapa */
+.contact-info { width: var(--container); margin: calc(190 * var(--u)) auto 0; display: grid; grid-template-columns: calc(714 * var(--u)) 1fr; gap: calc(54 * var(--u)); align-items: start; }
 .contact-info > * { min-width: 0; }
-.contact-info .map { display: block; border-radius: var(--radius-xl); overflow: hidden; min-height: 260px; aspect-ratio: 714 / 581; }
+.contact-info .map { position: relative; z-index: 0; isolation: isolate; display: block; width: 100%; border-radius: var(--radius-xl); overflow: hidden; min-height: 260px; aspect-ratio: 714 / 715; background: var(--sky); }
 .contact-info .map img, .contact-info .map iframe { width: 100%; height: 100%; object-fit: cover; border: 0; }
-.contact-card { position: relative; margin-top: calc(84 * var(--u)); background: var(--sky); border-radius: var(--radius-xl); padding: calc(140 * var(--u)) calc(40 * var(--u)) calc(50 * var(--u)); }
+.contact-card { position: relative; align-self: stretch; margin-top: calc(84 * var(--u)); background: var(--sky); border-radius: var(--radius-xl); padding: calc(190 * var(--u)) calc(40 * var(--u)) calc(50 * var(--u)) calc(46 * var(--u)); }
+/* Mapa interactivo (Leaflet): marcador, etiqueta y aviso para celular */
+.contact-info .leaflet-container { font-family: inherit; }
+.map-pin svg { width: 40px; height: 40px; fill: var(--orange); stroke: #fff; stroke-width: 1; filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .35)); }
+.leaflet-tooltip.map-label { background: #fff; color: var(--navy); font-weight: 700; font-size: 13px; border: 0; border-radius: 8px; padding: 4px 10px; box-shadow: 0 4px 12px rgba(7, 63, 161, .25); }
+.leaflet-tooltip.map-label::before { display: none; }
+.leaflet-popup-content { font-size: 14px; line-height: 1.4; color: var(--navy); }
+.leaflet-popup-content a { color: var(--blue); font-weight: 700; text-decoration: underline; }
+.map-hint { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1000; background: rgba(7, 63, 161, .9); color: #fff; font-weight: 600; font-size: 13px; padding: 8px 16px; border-radius: 999px; white-space: nowrap; }
 .contact-card .float-icon { top: calc(-110 * var(--u)); right: calc(56 * var(--u)); }
-.contact-card .h-section { font-size: calc(52 * var(--u)); }
-.contact-card ul { margin-top: calc(40 * var(--u)); display: grid; gap: calc(26 * var(--u)); }
-.contact-card li a, .contact-card li > span { display: flex; align-items: center; gap: calc(18 * var(--u)); color: var(--navy); font-size: calc(20 * var(--u)); line-height: 1.4; }
+.contact-card .h-section { font-size: calc(52 * var(--u)); margin-left: calc(5 * var(--u)); }
+.contact-card ul { margin-top: calc(52 * var(--u)); display: grid; gap: calc(22 * var(--u)); }
+/* Tracking −40 del diseño: así la dirección cabe en dos líneas como en la maqueta */
+.contact-card li a, .contact-card li > span { display: flex; align-items: center; gap: calc(22 * var(--u)); color: var(--navy); font-size: calc(20 * var(--u)); line-height: 1.4; letter-spacing: -0.04em; }
 .contact-card li a:hover { text-decoration: underline; }
 .contact-card .ic { flex: 0 0 auto; width: calc(48 * var(--u)); height: calc(48 * var(--u)); min-width: 34px; min-height: 34px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; }
 .contact-card .ic svg { width: 48%; height: 48%; fill: currentColor; }
@@ -1009,14 +1024,15 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* Nosotros y Contacto: cuerpo de texto en 25 */
 .about .card, .team p, .contact-card li a, .contact-card li > span { font-size: max(14px, calc(25 * var(--u))); }
-.about .card .h-section, .contact-card .h-section { font-size: calc(55 * var(--u)); }
+.about .card .h-section { font-size: calc(55 * var(--u)); }
+.contact-card .h-section { font-size: calc(50 * var(--u)); }
 .clients .h-sub { font-size: max(14px, calc(30 * var(--u))); }
 
 
 /* Interlineado del diseño (Illustrator, 120 %) */
 .h-section { line-height: 1.15; }
 .h-sub { line-height: 1.3; }
-.about .card, .team p, .acc-a .inner, .contact-card li a, .contact-card li > span, .growth .card, .steps6 .copy p, .fr-note p, .eq p { line-height: 1.2; }
+.about .card, .team p, .acc-a .inner, .growth .card, .steps6 .copy p, .fr-note p, .eq p { line-height: 1.2; }
 .model-item p { line-height: 1.25; }
 .product-card p, .diff-card h3, .step h3, .eq-feat .item h3 { line-height: 1.2; }
 .testi-card blockquote { line-height: 1.4; }
@@ -1074,7 +1090,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .pg-distrib .steps6 .copy p:first-of-type { margin-top: calc(45 * var(--u)); }
 .pg-distrib .steps6 ol { gap: calc(25 * var(--u)); }
 .pg-distrib .steps6 li { height: calc(94 * var(--u)); background: #e3f5ff; border-radius: calc(16 * var(--u)); padding-left: calc(50 * var(--u)); gap: calc(49 * var(--u)); font-weight: 600; font-size: max(12px, calc(25 * var(--u))); }
-.pg-distrib .steps6 li:first-child { height: calc(84 * var(--u)); background: #fff; }
+/* Todas las tarjetas del mismo color; la blanca del diseño queda como estado al pasar el mouse */
+.pg-distrib .steps6 li { transition: transform .25s, background-color .25s; }
+.pg-distrib .steps6 li:hover { background: #fff; }
 .pg-distrib .steps6 li svg { width: calc(48 * var(--u)); height: calc(48 * var(--u)); }
 .pg-distrib .faq { margin-top: calc(170 * var(--u)); }
 .pg-distrib .contact-form-box { margin-top: calc(180 * var(--u)); }
@@ -1102,7 +1120,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .pg-franq .fr-invest .copy p:first-of-type { margin-top: calc(42 * var(--u)); }
 .pg-franq .fr-invest ol { gap: calc(25 * var(--u)); }
 .pg-franq .fr-invest li { height: calc(94 * var(--u)); background: #e3f5ff; border-radius: calc(16 * var(--u)); padding-left: calc(50 * var(--u)); gap: calc(55 * var(--u)); font-weight: 600; font-size: max(12px, calc(25 * var(--u))); }
-.pg-franq .fr-invest li:first-child { height: calc(84 * var(--u)); background: #fff; }
+/* Todas las tarjetas del mismo color; la blanca del diseño queda como estado al pasar el mouse */
+.pg-franq .fr-invest li { transition: transform .25s, background-color .25s; }
+.pg-franq .fr-invest li:hover { background: #fff; }
 .pg-franq .fr-invest li svg { width: calc(48 * var(--u)); height: calc(48 * var(--u)); }
 .pg-franq .fr-invest + .section { margin-top: calc(144 * var(--u)); }
 .pg-franq .fr-combos { margin-top: calc(70 * var(--u)); padding: calc(60 * var(--u)) calc(60 * var(--u)) calc(50 * var(--u)); }

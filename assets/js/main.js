@@ -78,7 +78,7 @@ function renderHeader() {
     <div class="inner">
       <a class="logo" href="index.html" aria-label="A Granel 24/7 — Inicio"><img src="assets/img/logo-blanco.webp" alt="A Granel 24/7 by Water Target" width="600" height="425"></a>
       <nav class="nav" aria-label="Principal">
-        ${NAV.map(([href, label]) => `<a href="${href}"${href === page ? ' class="active" aria-current="page"' : ""}${href === "calculadora.html" ? " data-open-calculator" : ""}>${label}</a>`).join("")}
+        ${NAV.map(([href, label]) => `<a href="${href}"${href === page ? ' class="active" aria-current="page"' : ""}>${label}</a>`).join("")}
       </nav>
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -223,6 +223,40 @@ function bindTrack(wrap) {
   return update;
 }
 
+/* ---------- Tarjetas en bucle infinito ("5 negocios en uno") ---------- */
+function initLoops() {
+  $$("[data-loop]").forEach((root) => {
+    const track = $(".track", root);
+    const items = [...track.children];
+    if (items.length < 2) return;
+    // Segunda copia de las tarjetas: al terminar la primera, la rotación continúa sin saltos visibles
+    items.forEach((el) => { const c = el.cloneNode(true); c.setAttribute("aria-hidden", "true"); track.appendChild(c); });
+    const period = () => track.children[items.length].offsetLeft - items[0].offsetLeft;
+    const step = () => items[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0);
+    const jump = (left) => { track.style.scrollBehavior = "auto"; track.scrollLeft = left; track.style.scrollBehavior = ""; };
+    const wrap = () => { const p = period(); if (track.scrollLeft >= p - 2) jump(track.scrollLeft - p); };
+    let timer, hold = false, visible = false, t;
+    const move = (dir) => {
+      clearTimeout(t); wrap(); // el ajuste de vuelta pendiente se hace antes de moverse para no cancelar la animación
+      const s = step();
+      if (dir < 0 && track.scrollLeft < s - 2) jump(track.scrollLeft + period());
+      track.scrollBy({ left: dir * s, behavior: "smooth" });
+    };
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const play = () => { clearInterval(timer); if (!reduce && !hold && visible) timer = setInterval(() => move(1), +(root.dataset.interval || 2600)); };
+    $("[data-prev]", root)?.addEventListener("click", () => { move(-1); play(); });
+    $("[data-next]", root)?.addEventListener("click", () => { move(1); play(); });
+    track.addEventListener("scroll", () => { clearTimeout(t); t = setTimeout(wrap, 140); }, { passive: true });
+    // Se detiene mientras el usuario la toca o pasa el mouse, y solo rota cuando está en pantalla
+    root.addEventListener("mouseenter", () => { hold = true; play(); });
+    root.addEventListener("mouseleave", () => { hold = false; play(); });
+    root.addEventListener("touchstart", () => { hold = true; play(); }, { passive: true });
+    root.addEventListener("touchend", () => setTimeout(() => { hold = false; play(); }, 2500), { passive: true });
+    if ("IntersectionObserver" in window) new IntersectionObserver(([en]) => { visible = en.isIntersecting; play(); }).observe(root);
+    else { visible = true; play(); }
+  });
+}
+
 /* ---------- Catálogo de equipos ---------- */
 function initCatalog() {
   $$("[data-catalog]").forEach((root) => {
@@ -362,7 +396,7 @@ function initDiffCards() {
   });
 }
 
-/* ---------- Modales (calculadora / video) ---------- */
+/* ---------- Modal de video ---------- */
 let lastFocus = null;
 function openModal(html, { cls = "", title = "" } = {}) {
   let m = $("#modal");
@@ -393,16 +427,7 @@ function openModal(html, { cls = "", title = "" } = {}) {
   $(".close", m).focus();
 }
 function openVideo(src) { openModal(`<video src="${src}" controls autoplay playsinline></video>`, { cls: "video", title: "Video" }); }
-function openCalculator() {
-  $(".site-header")?.classList.remove("open");
-  openModal('<iframe src="calculadora.html" title="Calculadora ROI A Granel 24/7"></iframe>', { title: "Calculadora ROI A Granel 24/7" });
-}
 function initModals() {
-  $$("[data-open-calculator]").forEach((b) => b.addEventListener("click", (e) => {
-    e.preventDefault();
-    openCalculator();
-  }));
-  if (location.hash === "#calculadora") openCalculator();
   $$("[data-video-box]").forEach((box) => {
     box.addEventListener("click", () => {
       if (box.classList.contains("playing")) return;
@@ -411,6 +436,48 @@ function initModals() {
       box.appendChild(v); box.classList.add("playing");
     });
   });
+}
+
+/* ---------- Calculadora ROI: página completa bajo el menú del sitio ---------- */
+function initCalcFrame() {
+  const frame = $("[data-calc-frame]");
+  if (!frame) return;
+  // calculadora-roi.html avisa su altura para que la página haga el scroll (sin barra interna)
+  window.addEventListener("message", (e) => {
+    if (e.source === frame.contentWindow && e.data && e.data.agCalcHeight) frame.style.height = `${Math.ceil(e.data.agCalcHeight)}px`;
+  });
+}
+
+/* ---------- Mapa de Contacto (Leaflet + OpenStreetMap) ---------- */
+function initContactMap() {
+  const el = $("[data-osm-map]");
+  if (!el || !window.L) return; // sin conexión se queda la imagen fija del mapa
+  const pos = [+el.dataset.lat, +el.dataset.lng];
+  el.innerHTML = "";
+  const map = L.map(el, { scrollWheelZoom: false, zoomControl: true }).setView(pos, +(el.dataset.zoom || 17));
+  const calles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+  }).addTo(map);
+  const satelite = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+    maxZoom: 19, attribution: "Imágenes &copy; Esri",
+  });
+  L.control.layers({ Mapa: calles, "Satélite": satelite }, null, { position: "topright" }).addTo(map);
+  const pin = L.divIcon({ className: "map-pin", html: '<svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>', iconSize: [40, 40], iconAnchor: [20, 38], popupAnchor: [0, -34] });
+  const ruta = `https://www.openstreetmap.org/directions?route=%3B${pos[0]}%2C${pos[1]}#map=17/${pos[0]}/${pos[1]}`;
+  L.marker(pos, { icon: pin, title: "A Granel 24/7" }).addTo(map)
+    .bindTooltip("A Granel 24-7", { permanent: true, direction: "right", offset: [14, -18], className: "map-label" })
+    .bindPopup(`<strong>A Granel 24/7</strong><br>${el.dataset.address}<br><a href="${ruta}" target="_blank" rel="noopener">Cómo llegar</a>`);
+  // La rueda del mouse solo hace zoom después de dar clic en el mapa (no estorba el scroll de la página)
+  map.on("click", () => map.scrollWheelZoom.enable());
+  el.addEventListener("mouseleave", () => map.scrollWheelZoom.disable());
+  // En celular, un dedo desliza la página; el mapa se mueve después de tocar el aviso
+  if (L.Browser.mobile) {
+    map.dragging.disable();
+    const hint = L.DomUtil.create("button", "map-hint", el);
+    hint.type = "button";
+    hint.textContent = "Toca para mover el mapa";
+    L.DomEvent.on(hint, "click", (e) => { L.DomEvent.stop(e); map.dragging.enable(); hint.remove(); });
+  }
 }
 
 /* ---------- Video del hero (desktop/móvil) ---------- */
@@ -512,11 +579,14 @@ document.addEventListener("DOMContentLoaded", () => {
   initCarousels();
   initCatalog();
   $$("[data-track]").forEach(bindTrack);
+  initLoops();
   initReels();
   initAccordions();
   initModelPanel();
   initDiffCards();
   initModals();
+  initCalcFrame();
+  initContactMap();
   initHeroVideo();
   initMapAnimation();
   initFormShortcuts();

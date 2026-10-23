@@ -19,7 +19,7 @@ se publica solo en 1–2 minutos.
 | distribuidores.html | Distribuidores | `DISTRIBUIDORES/AG247_NUEVOSITIO_WIREFRAME_DISTRIBUIDORES.ai` |
 | equipo-*.html (10) | "Ver más" de cada equipo | `LANDING POR EQUIPO/*.ai` |
 | corporativos.html | Corporativos | Sin diseño → página "muy pronto" + formulario |
-| calculadora.html | Calculadora (pop-up desde el menú) | `CALCULADORA_ROI/index (5).html` |
+| calculadora.html | Calculadora (página completa con el menú del sitio arriba) | `CALCULADORA_ROI/index (5).html`, copiada en `calculadora-roi.html` |
 
 ## Medidas
 Todas las medidas usan "px del diseño" (`calc(N * var(--u))`): a 1920 px de ancho el sitio mide exactamente
@@ -42,6 +42,9 @@ imágenes en `assets/img/equipos/`); el segundo genera las 10 páginas `equipo-*
 - **Menú, footer, redes sociales, WhatsApp, Aviso de Privacidad y formulario**: `assets/js/main.js` → `CONFIG` y `NAV`.
 - **Catálogo de equipos** (tarjetas, filtros y a qué página lleva "Ver más"): `assets/js/main.js` → `EQUIPOS`.
 - **Modelos de franquicia del formulario**: `assets/js/main.js` → `FRANQUICIAS`.
+- **Mapa de Contacto** (OpenStreetMap con Leaflet, con opción "Satélite"): `contacto.html` → `data-lat` / `data-lng` del mapa.
+- **Calculadora**: si el cliente manda una versión nueva, reemplazar el contenido de `calculadora-roi.html`
+  conservando el bloque `<script>` que está justo después de `<body>` (ajusta la altura dentro de `calculadora.html`).
 
 ## Formularios
 Sin servidor, **Enviar** abre WhatsApp con los datos (número en `CONFIG.whatsapp`). Para recibirlos por
