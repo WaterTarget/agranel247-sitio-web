@@ -484,10 +484,11 @@ function initContactMap() {
     maxZoom: 19, attribution: "Imágenes &copy; Esri",
   });
   L.control.layers({ Mapa: calles, "Satélite": satelite }, null, { position: "topright" }).addTo(map);
-  const pin = L.divIcon({ className: "map-pin", html: '<svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>', iconSize: [40, 40], iconAnchor: [20, 38], popupAnchor: [0, -34] });
+  // Marcador: el showroom en miniatura (assets/img/showroom-pin.svg); la punta marca la entrada del local
+  const pin = L.icon({ iconUrl: "assets/img/showroom-pin.svg", iconSize: [104, 80], iconAnchor: [51, 77], popupAnchor: [0, -70], tooltipAnchor: [44, -46], className: "map-pin" });
   const ruta = `https://www.openstreetmap.org/directions?route=%3B${pos[0]}%2C${pos[1]}#map=17/${pos[0]}/${pos[1]}`;
   L.marker(pos, { icon: pin, title: "A Granel 24/7" }).addTo(map)
-    .bindTooltip("A Granel 24-7", { permanent: true, direction: "right", offset: [14, -18], className: "map-label" })
+    .bindTooltip("A Granel 24-7", { permanent: true, direction: "right", className: "map-label" })
     .bindPopup(`<strong>A Granel 24/7</strong><br>${el.dataset.address}<br><a href="${ruta}" target="_blank" rel="noopener">Cómo llegar</a>`);
   // La rueda del mouse solo hace zoom después de dar clic en el mapa (no estorba el scroll de la página)
   map.on("click", () => map.scrollWheelZoom.enable());
