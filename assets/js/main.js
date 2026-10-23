@@ -11,12 +11,11 @@ const CONFIG = {
   whatsapp: "523336308620",
   email: "contacto@agranel24-7.com",
   social: {
-    facebook: "#",
-    instagram: "#",
-    youtube: "#",
-    linkedin: "#",
+    facebook: "https://www.facebook.com/share/17qP31fJcX/",
+    instagram: "https://www.instagram.com/agranel247/",
+    tiktok: "https://www.tiktok.com/@agranel24_7",
   },
-  privacyUrl: "#",
+  privacyUrl: "", // URL del Aviso de Privacidad; mientras esté vacío se muestra como texto
 };
 
 const NAV = [
@@ -36,12 +35,19 @@ const ESTADOS = ["Aguascalientes", "Baja California", "Baja California Sur", "Ca
 /* Catálogo de equipos: tipo = kioskos | ventanas | vending; cat = filtro de producto */
 const EQUIPOS = [
   { name: "Ventana <br>de agua", desc: "Ventana automatizada de agua empotrada en muro", img: "equipo-ventana-agua", tipo: "ventanas", cat: ["agua"] },
-  { name: "Ventana <br>de hielo y agua", desc: "Ventana de automatizada de hielo y agua empotrada en muro", img: "equipo-ventana-hielo-agua", tipo: "ventanas", cat: ["agua-hielo", "agua", "hielo"] },
-  { name: "Ventana <br>de hielo", desc: "Ventana de automatizada de hielo empotrada en muro", img: "equipo-ventana-hielo", tipo: "ventanas", cat: ["hielo"] },
-  { name: "Ventana <br>de limpieza", desc: "Ventana de automatizada de seis productos de limpieza empotrada en muro", img: "equipo-ventana-limpieza", tipo: "ventanas", cat: ["limpieza"] },
-  { name: "Kiosko de agua", desc: "Sistema de purificación de agua <br>y ventana automatizada de agua empotrable en muro.", img: "equipo-kiosko-agua", tipo: "kioskos", cat: ["agua"], wide: true },
-  { name: "Kiosko dúo hielo &amp; agua", desc: "Sistema de purificación de agua <br>y ventana automatizada de hielo y agua empotrable en muro.", img: "equipo-kiosko-duo", tipo: "kioskos", cat: ["agua-hielo", "agua", "hielo"], wide: true },
+  { name: "Ventana <br>de hielo y agua", desc: "Ventana automatizada de hielo y agua empotrada en muro", img: "equipo-ventana-hielo-agua", tipo: "ventanas", cat: ["agua-hielo", "agua", "hielo"], href: "equipo-ventana-duo.html" },
+  { name: "Ventana <br>de hielo", desc: "Ventana automatizada de hielo empotrada en muro", img: "equipo-ventana-hielo", tipo: "ventanas", cat: ["hielo"], href: "equipo-ventana-hielo.html" },
+  { name: "Ventana <br>de limpieza", desc: "Ventana automatizada de seis productos de limpieza empotrada en muro", img: "equipo-ventana-limpieza", tipo: "ventanas", cat: ["limpieza"], href: "equipo-ventana-limpieza.html" },
+  { name: "Ventana de <br>limpieza 12", desc: "Ventana automatizada de doce productos de limpieza empotrada en muro", img: "equipo-ventana-limpieza-12", tipo: "ventanas", cat: ["limpieza"], href: "equipo-ventana-limpieza.html" },
+  { name: "Ventana <br>de croquetas", desc: "Ventana automatizada de cuatro tipos de croquetas empotrada en muro", img: "equipo-ventana-croquetas", tipo: "ventanas", cat: ["croquetas"], href: "equipo-ventana-croquetas.html" },
+  { name: "Ventana <br>de leguminosas", desc: "Ventana automatizada de cuatro tipos de granos y semillas empotrada en muro", img: "equipo-ventana-leguminosas", tipo: "ventanas", cat: ["leguminosas"], href: "equipo-ventana-leguminosas.html" },
+  { name: "Vending <br>de hielo", desc: "Máquina vending móvil de hielo a granel, ocupa aproximadamente 1 m²", img: "equipo-vending-hielo", tipo: "vending", cat: ["hielo"], href: "equipo-vending-hielo.html" },
+  { name: "Vending <br>de croquetas", desc: "Máquina vending móvil de cuatro tipos de croquetas", img: "equipo-vending-croquetas", tipo: "vending", cat: ["croquetas"], href: "equipo-vending-croquetas.html" },
+  { name: "Vending <br>de leguminosas", desc: "Máquina vending móvil de cuatro tipos de granos y semillas", img: "equipo-vending-leguminosas", tipo: "vending", cat: ["leguminosas"], href: "equipo-vending-leguminosas.html" },
+  { name: "Kiosko de agua", desc: "Sistema de purificación de agua <br>y ventana automatizada de agua empotrable en muro.", img: "equipo-kiosko-agua", tipo: "kioskos", cat: ["agua"], wide: true, href: "equipo-kiosko-agua.html" },
+  { name: "Kiosko dúo hielo &amp; agua", desc: "Sistema de purificación de agua <br>y ventana automatizada de hielo y agua empotrable en muro.", img: "equipo-kiosko-duo", tipo: "kioskos", cat: ["agua-hielo", "agua", "hielo"], wide: true, href: "equipo-kiosko-duo.html" },
 ];
+const FRANQUICIAS = ["Modelo Kiosko Dúo", "Modelo Kiosko Dúo y Limpieza", "Modelo Kiosko Dúo y Croquetas", "Modelo Kiosko Dúo, Croquetas y Limpieza"];
 const CHIPS = [["todos", "Todos"], ["kioskos", "Kioskos"], ["ventanas", "Ventanas"], ["vending", "Vending"], ["agua-hielo", "Agua y hielo"], ["agua", "Agua"], ["hielo", "Hielo"], ["limpieza", "Limpieza"], ["croquetas", "Croquetas"], ["leguminosas", "Leguminosas"]];
 
 /* ---------- Iconos ---------- */
@@ -54,6 +60,7 @@ const ICON = {
   sound: '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>Ver con sonido',
   facebook: '<svg viewBox="0 0 24 24"><path d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.3 2 10.3 3.5 10.3 6v2H8v3h2.3v11H14V11h2.6l.4-3z"/></svg>',
   instagram: '<svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4.9-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.1c-.1-1.6-.4-3-1.6-4.1C18.3 2.9 16.9 2.5 15.3 2.5 13.7 2.4 10.3 2.4 8.7 2.5 7.1 2.5 5.7 2.9 4.6 4 3.5 5.1 3.1 6.5 3 8.1c-.1 1.6-.1 6.2 0 7.8.1 1.6.4 3 1.6 4.1 1.1 1.1 2.5 1.5 4.1 1.5 1.6.1 5 .1 6.6 0 1.6-.1 3-.4 4.1-1.5 1.1-1.1 1.5-2.5 1.6-4.1.1-1.6.1-6.2 0-7.8zm-2 9.9a3 3 0 0 1-1.7 1.7c-1.2.5-3.9.4-5.3.4s-4.1.1-5.3-.4A3 3 0 0 1 5 18c-.5-1.2-.4-3.9-.4-5.3s-.1-4.1.4-5.3A3 3 0 0 1 6.7 5.7C7.9 5.2 10.6 5.3 12 5.3s4.1-.1 5.3.4A3 3 0 0 1 19 7.4c.5 1.2.4 3.9.4 5.3s.1 4.1-.4 5.3z"/></svg>',
+  tiktok: '<svg viewBox="0 0 24 24"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2-2.8V9.1a6.3 6.3 0 1 0 5.4 6.3V8.6a8.2 8.2 0 0 0 4.8 1.5V6.7a4.8 4.8 0 0 1-4.8-4.7z"/></svg>',
   youtube: '<svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15V9l5.8 3-5.8 3z"/></svg>',
   linkedin: '<svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>',
 };
@@ -65,7 +72,7 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 function renderHeader() {
   const slot = $("[data-header]");
   if (!slot) return;
-  const page = location.pathname.split("/").pop() || "index.html";
+  const page = document.body.dataset.page ? `${document.body.dataset.page}.html` : location.pathname.split("/").pop() || "index.html";
   slot.outerHTML = `
   <header class="site-header">
     <div class="inner">
@@ -94,10 +101,10 @@ function renderFooter() {
     <div class="inner">
       <div>
         <a class="logo" href="index.html"><img src="assets/img/logo-blanco.webp" alt="A Granel 24/7" width="600" height="425" loading="lazy"></a>
-        <p>Todos los derechos reservados A Granel 24/7 ${year} ® <br>Consulta nuestra Política de uso de datos personales. <a href="${CONFIG.privacyUrl}">Aviso de Privacidad</a></p>
+        <p>Todos los derechos reservados A Granel 24/7 ${year} ® <br>Consulta nuestra Política de uso de datos personales. ${CONFIG.privacyUrl && CONFIG.privacyUrl !== "#" ? `<a href="${CONFIG.privacyUrl}">Aviso de Privacidad</a>` : "Aviso de Privacidad"}</p>
       </div>
       <div class="social">
-        ${["facebook", "instagram", "youtube", "linkedin"].map((k) => `<a href="${CONFIG.social[k]}" target="_blank" rel="noopener" aria-label="${k}">${ICON[k]}</a>`).join("")}
+        ${Object.keys(CONFIG.social).map((k) => `<a href="${CONFIG.social[k]}" target="_blank" rel="noopener" aria-label="A Granel 24/7 en ${k[0].toUpperCase() + k.slice(1)}">${ICON[k]}</a>`).join("")}
       </div>
     </div>
   </footer>`;
@@ -120,7 +127,8 @@ function renderContactForms() {
         ${variant === "distribuidor" ? `<div class="row"><label for="f-giro-${variant}">Giro de tu empresa:</label><input id="f-giro-${variant}" name="giro" placeholder="Ej. Fabricación de productos de limpieza"></div>` : ""}
         <div class="row"><label for="f-estado-${variant}">Estado:</label><select id="f-estado-${variant}" name="estado" required><option value="" disabled selected>Aguascalientes</option>${opts}</select></div>
         <div class="row"><label for="f-ciudad-${variant}">Ciudad:</label><input id="f-ciudad-${variant}" name="ciudad" required placeholder="Ej. Zapopan"></div>
-        <div class="row top"><label for="f-msg-${variant}">Mensaje:</label><textarea id="f-msg-${variant}" name="mensaje" placeholder="Ej. Hola! Quiero más información sobre los equipos vending."></textarea></div>
+        ${variant === "franquicia" ? `<div class="row"><label for="f-modelo-${variant}">Modelo de franquicia:</label><select id="f-modelo-${variant}" name="modelo" class="filled">${FRANQUICIAS.map((m) => `<option>${m}</option>`).join("")}</select></div>` : ""}
+        <div class="row top"><label for="f-msg-${variant}">Mensaje:</label><textarea id="f-msg-${variant}" name="mensaje" placeholder="${variant === "franquicia" ? "Ej. Hola! Quiero más información sobre el modelo de franquicia Dúo y Limpieza." : "Ej. Hola! Quiero más información sobre los equipos vending."}">${slot.dataset.equipo ? `Hola! Quiero más información sobre el equipo ${slot.dataset.equipo}.` : ""}</textarea></div>
         <div class="actions"><span class="form-msg" role="status"></span><button class="btn btn-send" type="submit">Enviar</button></div>
       </form>
     </section>`;
@@ -158,6 +166,7 @@ function renderContactForms() {
         data.correo && `Correo: ${data.correo}`,
         `WhatsApp: ${data.whatsapp}`,
         data.giro && `Giro: ${data.giro}`,
+        data.modelo && `Modelo de franquicia: ${data.modelo}`,
         `Ubicación: ${data.ciudad}, ${data.estado}`,
         data.mensaje && `Mensaje: ${data.mensaje}`,
         `(${data.origen})`,
@@ -232,7 +241,7 @@ function initCatalog() {
           <div class="pc-img"><img src="assets/img/${p.img}.webp" alt="${p.name.replace(/ <br>/g, " ")}" loading="lazy"></div>
           <h3>${p.name}</h3>
           <p>${p.desc}</p>
-          <a class="btn btn-sm" href="equipos.html#catalogo">Ver más</a>
+          ${p.href ? `<a class="btn btn-sm" href="${p.href}">Ver más</a>` : `<a class="btn btn-sm" href="#formulario" data-interes="${p.name.replace(/ <br>/g, " ")}">Cotizar</a>`}
         </article>`).join("");
       empty.classList.toggle("show", items.length === 0);
       track.scrollLeft = 0;
@@ -430,13 +439,6 @@ function initMapAnimation() {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   sections.forEach((sec) => {
-    let map = $(".map", sec);
-    // Safari no reproduce video con transparencia (WebM VP9): se usa la imagen fija
-    if (map.tagName === "VIDEO" && !map.canPlayType('video/webm; codecs="vp9"')) {
-      const img = new Image();
-      img.className = "map"; img.src = map.getAttribute("poster"); img.alt = map.getAttribute("aria-label") || "";
-      map.replaceWith(img); map = img;
-    }
     // El mapa solo muestra el movimiento propio del video; aquí solo se animan textos y contadores.
     const title = $(".h-section", sec);
     const sub = $(".h-sub", sec);
@@ -458,6 +460,27 @@ function initMapAnimation() {
       .to(title, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.1)
       .to(sub, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.3)
       .to(stats, { opacity: 1, y: 0, duration: 0.7, stagger: 0.18, ease: "power3.out", onStart: () => counters.forEach((c, i) => setTimeout(() => countUp(c), i * 180)) }, 0.5);
+  });
+}
+
+/* ---------- Botones que llenan el formulario ("Cotizar", "Seleccionar") ---------- */
+function initFormShortcuts() {
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-interes], [data-modelo]");
+    if (!b) return;
+    const form = $("#formulario form");
+    if (!form) return;
+    e.preventDefault();
+    const msg = $("textarea", form);
+    if (b.dataset.modelo) {
+      const sel = $('select[name="modelo"]', form);
+      if (sel) sel.value = b.dataset.modelo;
+      msg.value = `Hola! Quiero más información sobre el ${b.dataset.modelo.replace("Modelo", "modelo de franquicia")}.`;
+    } else {
+      msg.value = `Hola! Quiero cotizar el equipo ${b.dataset.interes}.`;
+    }
+    $("#formulario").scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => $('input[name="nombre"]', form).focus({ preventScroll: true }), 600);
   });
 }
 
@@ -489,5 +512,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initModals();
   initHeroVideo();
   initMapAnimation();
+  initFormShortcuts();
   initReveal();
 });

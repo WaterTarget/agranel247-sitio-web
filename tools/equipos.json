@@ -1,0 +1,1799 @@
+{
+ "kiosko-agua": {
+  "slug": "kiosko-agua",
+  "key": "KIOSKO_AGUA",
+  "producto_box": [
+   1480,
+   399,
+   1810,
+   1156
+  ],
+  "producto": "assets/img/equipos/kiosko-agua-producto.webp",
+  "producto_size": [
+   700,
+   1604
+  ],
+  "hero_top": 271,
+  "hero_h": 6424,
+  "titulo": [
+   "KIOSKO",
+   "DE AGUA"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "El Kiosko de Agua es una solución vending automatizada para la venta de agua purificada en garrafones, diseñada para ofrecer un servicio práctico y accesible durante las 24 horas del día. Integra un sistema profesional de purificación por ósmosis inversa para producir agua destinada a la comercialización.",
+   "Su diseño compacto permite instalarlo en espacios comerciales reducidos, sin necesidad de atender personalmente cada venta. Además, su operación automatizada permite mantener el servicio disponible incluso fuera del horario comercial habitual."
+  ],
+  "hero_colores": {
+   "izq": "#0257ef",
+   "der": "#529ffe",
+   "brillo": "#389af9",
+   "arriba": "#378bf9"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "PRODUCE HASTA",
+     "130 GARRAFONES",
+     "POR DÍA"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "SISTEMA DE",
+     "PURIFICACIÓN POR",
+     "ÓSMOSIS INVERSA"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "TABLERO DE FÁCIL",
+     "INTERACCIÓN",
+     "PARA EL USUARIO"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "INTEGRA AL SISTEMA",
+     "AGUA ALCALINA",
+     "AL SISTEMA"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "El Kiosko de Agua integra un sistema de purificación por etapas que combina prefiltración, acondicionamiento del agua, ósmosis inversa y procesos de pulido y desinfección. Sus componentes trabajan de manera conjunta para acondicionar el agua antes de su suministro al punto de venta.",
+   "Su diseño concentra los elementos necesarios para seleccionar y operar el servicio de manera sencilla."
+  ],
+  "componentes_etiquetas": [
+   "Display",
+   "a color",
+   "5 botones de fácil interacción",
+   "Agua Alcalina",
+   "(Opcional)",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Salida de Agua",
+   "Compuerta",
+   "de acrílico",
+   "Boquilla de Enjuague"
+  ],
+  "purificacion": true,
+  "purificacion_bg": "#e3f5ff",
+  "vending": false,
+  "cashback": false,
+  "inversion_bg": "#f2f2f2",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA",
+    "valor": "$109,000",
+    "y": 5229.02783203125,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$133,995",
+    "y": 5428.58154296875,
+    "x": 722.01318359375
+   }
+  ],
+  "precios_layout": "simple",
+  "alcalina": true,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/kiosko-agua-carac1.webp",
+    "w": 88,
+    "h": 152
+   },
+   {
+    "src": "assets/img/equipos/kiosko-agua-carac2.webp",
+    "w": 156,
+    "h": 155
+   },
+   {
+    "src": "assets/img/equipos/kiosko-agua-carac3.webp",
+    "w": 104,
+    "h": 150
+   },
+   {
+    "src": "assets/img/equipos/kiosko-agua-carac4.webp",
+    "w": 141,
+    "h": 155
+   }
+  ],
+  "diagrama_w": 615,
+  "diagrama": "assets/img/equipos/kiosko-agua-componentes.webp",
+  "diagrama_size": [
+   1230,
+   1681
+  ],
+  "purificacion_w": 1282,
+  "purificacion_dx": 54,
+  "purificacion_img": "assets/img/equipos/kiosko-agua-purificacion.webp",
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/kiosko-agua-garantia.webp"
+ },
+ "_comun": {
+  "cashback_items": [
+   "GENERA MÁS VENTAS DANDO A TUS CLIENTES PUNTOS EN CADA COMPRA",
+   "REGALA PRODUCTO EN ACTIVACIONES COMERCIALES",
+   "BONIFICA EL CAMBIO PARA PRÓXIMAS COMPRAS"
+  ]
+ },
+ "kiosko-duo": {
+  "slug": "kiosko-duo",
+  "key": "KIOSKO_DUO",
+  "producto_box": [
+   1480,
+   363,
+   1812,
+   1192
+  ],
+  "producto": "assets/img/equipos/kiosko-duo-producto.webp",
+  "producto_size": [
+   700,
+   1768
+  ],
+  "hero_top": 271,
+  "hero_h": 7724,
+  "titulo": [
+   "KIOSKO DÚO",
+   "HIELO Y AGUA"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Equipo vending que produce agua purificada y cubos de hielo de venta a granel.",
+   "El Kiosko DÚO incluye un sistema de purificación que produce hasta 130 garrafones por día, y cuenta con una fabricadora de hielo que produce desde 220 Kg o 450 Kg cada 24 horas.",
+   "Este equipo cuenta con una ventana totalmente empotrable en el muro, y en el interior de tu local comercial se instala el sistema de purificación."
+  ],
+  "hero_colores": {
+   "izq": "#073fa1",
+   "der": "#0155ed",
+   "brillo": "#0458d5",
+   "arriba": "#0351d6"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "PRODUCE HASTA",
+     "130 GARRAFONES",
+     "POR DÍA"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "FABRICA HASTA",
+     "450 KG DE HIELO",
+     "EN 24 HORAS"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "Cada componente desempeña una función dentro de la operación general del equipo, desde la purificación del agua hasta el despacho de los productos. La integración de estos elementos permite concentrar diferentes procesos en una misma solución vending, con una configuración diseñada para aplicaciones comerciales.",
+   "En el siguiente esquema se identifican los principales componentes que conforman el Kiosko Dúo."
+  ],
+  "componentes_etiquetas": [
+   "Display",
+   "a color",
+   "Lector de tarjetas",
+   "bancarias",
+   "(Opcional)",
+   "Billetero (Opcional)",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Salida de hielo",
+   "Despachador manual de hielo",
+   "a granel",
+   "Sensor de Cashback",
+   "Salida de agua"
+  ],
+  "purificacion": true,
+  "purificacion_bg": "#e3f5ff",
+  "vending": false,
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 450 KG",
+    "valor": "$299,000",
+    "y": 6510.5234375,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$367,553",
+    "y": 6545.5849609375,
+    "x": 1243.107421875
+   },
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 220 KG",
+    "valor": "$282,000",
+    "y": 6736.05078125,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$346,656",
+    "y": 6771.20947265625,
+    "x": 1243.0439453125
+   }
+  ],
+  "precios_layout": "doble",
+  "alcalina": true,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/kiosko-duo-carac1.webp",
+    "w": 88,
+    "h": 152
+   },
+   {
+    "src": "assets/img/equipos/kiosko-duo-carac2.webp",
+    "w": 112,
+    "h": 156
+   },
+   {
+    "src": "assets/img/equipos/kiosko-duo-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/kiosko-duo-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 558,
+  "diagrama": "assets/img/equipos/kiosko-duo-componentes.webp",
+  "diagrama_size": [
+   1115,
+   1676
+  ],
+  "purificacion_w": 1282,
+  "purificacion_dx": 54,
+  "purificacion_img": "assets/img/equipos/kiosko-duo-purificacion.webp",
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/kiosko-duo-garantia.webp"
+ },
+ "vending-croquetas": {
+  "slug": "vending-croquetas",
+  "key": "VENDING_CROQUETAS",
+  "producto_box": [
+   1399,
+   384,
+   1856,
+   1194
+  ],
+  "producto": "assets/img/equipos/vending-croquetas-producto.webp",
+  "producto_size": [
+   700,
+   1176
+  ],
+  "hero_top": 271,
+  "hero_h": 7408,
+  "titulo": [
+   "VENDING",
+   "DE CROQUETAS"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Equip vending móvil para la venta de hasta cuatro variedades de croquetas a granel en un mismo punto de venta, adaptando la oferta a las preferencias del mercado.",
+   "Su formato independiente ocupa aproximadamente 1 m² y facilita su instalación en distintos espacios comerciales, sin necesidad de empotrarla en un muro. Cuenta con cuatro tolvas de almacenamiento para cada producto, manteniendo disponible el servicio de venta las 24 horas del día.",
+   "Además, puede complementarse con un despachador opcional de shampoo para mascotas a granel, ampliando la variedad de productos disponibles."
+  ],
+  "hero_colores": {
+   "izq": "#c70d80",
+   "der": "#fd4eba",
+   "brillo": "#e533a3",
+   "arriba": "#ec3cab"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "OFRECE HASTA 4",
+     "DIFERENTES TIPOS",
+     "DE CROQUETAS"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "AGREGA SHAMPOO",
+     "PARA MASCOTAS",
+     "A GRANEL"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "La Ventana de Croquetas integra un sistema de almacenamiento y despacho compuesto por cuatro tolvas independientes, con salidas individuales para cada producto. Su configuración permite dispensar el alimento directamente a granel.",
+   "Este equipo reúne los elementos de almacenamiento, control y distribución en una unidad compacta, diseñada para la venta automatizada de alimento para mascotas."
+  ],
+  "componentes_etiquetas": [
+   "Lector de tarjetas",
+   "bancarias (Opcional)",
+   "Display",
+   "a color",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Billetero (Opcional)",
+   "Sensor de Cashback",
+   "Ventanas para exhibición de los productos",
+   "Salida independiente para cada producto",
+   "Despachador",
+   "de shampoo"
+  ],
+  "purificacion": false,
+  "vending": true,
+  "vending_items": [
+   "IDEAL PARA INTERIOR O EXTERIOR PROTEGIDO",
+   "EQUIPOS DE FÁCIL INSTALACIÓN",
+   "APROVECHA ESPACIOS REDUCIDOS"
+  ],
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA",
+    "valor": "$106,000",
+    "y": 6469.33056640625,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$130,307",
+    "y": 6668.88525390625,
+    "x": 722.01318359375
+   }
+  ],
+  "precios_layout": "simple",
+  "alcalina": false,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/vending-croquetas-carac1.webp",
+    "w": 146,
+    "h": 152
+   },
+   {
+    "src": "assets/img/equipos/vending-croquetas-carac2.webp",
+    "w": 74,
+    "h": 158
+   },
+   {
+    "src": "assets/img/equipos/vending-croquetas-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/vending-croquetas-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 671,
+  "diagrama": "assets/img/equipos/vending-croquetas-componentes.webp",
+  "diagrama_size": [
+   1342,
+   1674
+  ],
+  "vending_img": "assets/img/equipos/vending-croquetas-espacio.webp",
+  "vending_iconos": [
+   {
+    "src": "assets/img/equipos/vending-croquetas-vend1.webp",
+    "w": 64
+   },
+   {
+    "src": "assets/img/equipos/vending-croquetas-vend2.webp",
+    "w": 56
+   },
+   {
+    "src": "assets/img/equipos/vending-croquetas-vend3.webp",
+    "w": 72
+   }
+  ],
+  "cinta_color": "#d41c8e",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/vending-croquetas-garantia.webp"
+ },
+ "vending-hielo": {
+  "slug": "vending-hielo",
+  "key": "VENDING_HIELO",
+  "producto_box": [
+   1449,
+   363,
+   1842,
+   1205
+  ],
+  "producto": "assets/img/equipos/vending-hielo-producto.webp",
+  "producto_size": [
+   700,
+   1320
+  ],
+  "hero_top": 271,
+  "hero_h": 7397,
+  "titulo": [
+   "VENDING",
+   "DE HIELO"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Máquina vending móvil para la producción y venta de hielo a granel, que despacha la cantidad de producto equivalente al monto ingresado, facilitando una compra autónoma las 24 horas del día.",
+   "Su formato independiente ocupa aproximadamente 1 m² y facilita su instalación en distintos espacios comerciales. Es compatible con fabricadoras de hielo de diferentes capacidades, según las necesidades del negocio.",
+   "Además, puede incorporar un billetero y un lector de tarjetas bancarias opcionales, ampliando las formas de pago disponibles."
+  ],
+  "hero_colores": {
+   "izq": "#073fa1",
+   "der": "#0155ed",
+   "brillo": "#0553d2",
+   "arriba": "#0351d6"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "CUBO DE HIELO",
+     "TAMAÑO XXL",
+     "38X38X22 MM"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "FABRICA DE 220 KG",
+     "HASTA 450 KG",
+     "EN 24 HORAS"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "La Ventana de Hielo integra un sistema de despacho con monedero inteligente, display a color y sensor de cashback. Su estructura de acero incorpora una salida para el suministro de hielo y un despachador manual diseñado para la entrega del producto a granel.",
+   "El equipo permite integrar billetero y lector de tarjetas bancarias como accesorios opcionales, adaptando su configuración a las necesidades de operación del negocio."
+  ],
+  "componentes_etiquetas": [
+   "Display",
+   "a color",
+   "Lector de tarjetas",
+   "bancarias",
+   "(Opcional)",
+   "Billetero (Opcional)",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Salida de hielo",
+   "Despachador manual de hielo",
+   "a granel",
+   "Sensor de Cashback"
+  ],
+  "purificacion": false,
+  "vending": true,
+  "vending_items": [
+   "IDEAL PARA INTERIOR O EXTERIOR PROTEGIDO",
+   "EQUIPOS DE FÁCIL INSTALACIÓN",
+   "APROVECHA ESPACIOS REDUCIDOS"
+  ],
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 450 KG",
+    "valor": "$253,000",
+    "y": 6463.14599609375,
+    "x": 699.54541015625
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$312,350",
+    "y": 6498.20654296875,
+    "x": 1227.78857421875
+   },
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 220 KG",
+    "valor": "$135,000",
+    "y": 6688.67333984375,
+    "x": 699.54541015625
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$290,000",
+    "y": 6723.83203125,
+    "x": 1227.72509765625
+   }
+  ],
+  "precios_layout": "doble",
+  "alcalina": false,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/vending-hielo-carac1.webp",
+    "w": 134,
+    "h": 150
+   },
+   {
+    "src": "assets/img/equipos/vending-hielo-carac2.webp",
+    "w": 112,
+    "h": 156
+   },
+   {
+    "src": "assets/img/equipos/vending-hielo-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/vending-hielo-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 558,
+  "diagrama": "assets/img/equipos/vending-hielo-componentes.webp",
+  "diagrama_size": [
+   1115,
+   1676
+  ],
+  "vending_img": "assets/img/equipos/vending-hielo-espacio.webp",
+  "vending_iconos": [
+   {
+    "src": "assets/img/equipos/vending-hielo-vend1.webp",
+    "w": 64
+   },
+   {
+    "src": "assets/img/equipos/vending-hielo-vend2.webp",
+    "w": 56
+   },
+   {
+    "src": "assets/img/equipos/vending-hielo-vend3.webp",
+    "w": 72
+   }
+  ],
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/vending-hielo-garantia.webp"
+ },
+ "vending-leguminosas": {
+  "slug": "vending-leguminosas",
+  "key": "VENDING_LEGUMINOSAS",
+  "producto_box": [
+   1399,
+   384,
+   1857,
+   1194
+  ],
+  "producto": "assets/img/equipos/vending-leguminosas-producto.webp",
+  "producto_size": [
+   700,
+   1176
+  ],
+  "hero_top": 271,
+  "hero_h": 7408,
+  "titulo": [
+   "VENDING",
+   "DE LEGUMINOSAS"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Equipo vending móvil para la venta de hasta cuatro variedades de productos a granel en un mismo punto de venta, adaptando la oferta a las preferencias del mercado.",
+   "Su formato independiente ocupa aproximadamente 1 m² y facilita su instalación en distintos espacios comerciales, sin necesidad de empotrarla en un muro. Cuenta con cuatro tolvas de almacenamiento para cada producto, manteniendo disponible el servicio de venta las 24 horas del día.",
+   "Además, puede complementarse con un despachador opcional de aceite vegetal de cocina a granel, ampliando la variedad de productos disponibles."
+  ],
+  "hero_colores": {
+   "izq": "#408017",
+   "der": "#38b500",
+   "brillo": "#3ea30a",
+   "arriba": "#3dab05"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "OFRECE HASTA 4",
+     "TIPOS DE GRANOS",
+     "O SEMILLAS"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "AGREGA",
+     "DESPACHADOR",
+     "DE ACEITE VEGETAL"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "La Ventana de Leguminosas integra cuatro tolvas de almacenamiento con salidas independientes para dosificar cada variedad de producto. Su estructura de acero incorpora ventanas de exhibición que facilitan la supervisión de los niveles de abastecimiento, junto con los mecanismos de control y despacho.",
+   "Esta configuración reúne almacenamiento, exhibición y suministro en una unidad compacta para la venta automatizada a granel."
+  ],
+  "componentes_etiquetas": [
+   "Lector de tarjetas",
+   "bancarias (Opcional)",
+   "Display",
+   "a color",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Billetero (Opcional)",
+   "Sensor de Cashback",
+   "Ventanas para exhibición de los productos",
+   "Salida independiente para cada producto",
+   "Despachador de",
+   "aceite vegetal"
+  ],
+  "purificacion": false,
+  "vending": true,
+  "vending_items": [
+   "IDEAL PARA INTERIOR O EXTERIOR PROTEGIDO",
+   "EQUIPOS DE FÁCIL INSTALACIÓN",
+   "APROVECHA ESPACIOS REDUCIDOS"
+  ],
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA",
+    "valor": "$106,000",
+    "y": 6469.3232421875,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$130,307",
+    "y": 6668.8779296875,
+    "x": 722.01318359375
+   }
+  ],
+  "precios_layout": "simple",
+  "alcalina": false,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/vending-leguminosas-carac1.webp",
+    "w": 150,
+    "h": 128
+   },
+   {
+    "src": "assets/img/equipos/vending-leguminosas-carac2.webp",
+    "w": 129,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/vending-leguminosas-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/vending-leguminosas-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 671,
+  "diagrama": "assets/img/equipos/vending-leguminosas-componentes.webp",
+  "diagrama_size": [
+   1342,
+   1674
+  ],
+  "vending_img": "assets/img/equipos/vending-leguminosas-espacio.webp",
+  "vending_iconos": [
+   {
+    "src": "assets/img/equipos/vending-leguminosas-vend1.webp",
+    "w": 64
+   },
+   {
+    "src": "assets/img/equipos/vending-leguminosas-vend2.webp",
+    "w": 56
+   },
+   {
+    "src": "assets/img/equipos/vending-leguminosas-vend3.webp",
+    "w": 72
+   }
+  ],
+  "cinta_color": "#3d960d",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/vending-leguminosas-garantia.webp"
+ },
+ "ventana-croquetas": {
+  "slug": "ventana-croquetas",
+  "key": "VENTANA_CROQUETAS",
+  "producto_box": [
+   1435,
+   363,
+   1854,
+   1192
+  ],
+  "producto": "assets/img/equipos/ventana-croquetas-producto.webp",
+  "producto_size": [
+   700,
+   1383
+  ],
+  "hero_top": 271,
+  "hero_h": 6282,
+  "titulo": [
+   "VENTANA",
+   "DE CROQUETAS"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Equipo vending automatizado para la venta de croquetas a granel, diseñado para ofrecer hasta cuatro variedades de alimento para mascotas en un mismo punto de venta, adaptando la oferta a las preferencias de los consumidores.",
+   "Además, ofrece la capaciad de adicionar un despachador de shampoo para mascotas a granel.",
+   "Gracias a su diseño compacto, la Ventana de Croquetas puede incorporarse a distintos espacios comerciales, ofreciendo una alternativa para diversificar la oferta de productos para mascotas mediante un sistema de venta automatizado."
+  ],
+  "hero_colores": {
+   "izq": "#c70d80",
+   "der": "#fd4eba",
+   "brillo": "#e530a1",
+   "arriba": "#ed3cab"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "OFRECE HASTA 4",
+     "DIFERENTES TIPOS",
+     "DE CROQUETAS"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "AGREGA SHAMPOO",
+     "PARA MASCOTAS",
+     "A GRANEL"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "La Ventana de Croquetas integra un sistema de almacenamiento y despacho compuesto por cuatro tolvas independientes, con salidas individuales para cada producto. Su configuración permite dispensar el alimento directamente a granel.",
+   "Este equipo reúne los elementos de almacenamiento, control y distribución en una unidad compacta, diseñada para la venta automatizada de alimento para mascotas."
+  ],
+  "componentes_etiquetas": [
+   "Lector de tarjetas",
+   "bancarias (Opcional)",
+   "Display",
+   "a color",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Billetero (Opcional)",
+   "Sensor de Cashback",
+   "Ventanas para exhibición de los productos",
+   "Salida independiente para cada producto",
+   "Despachador",
+   "de shampoo"
+  ],
+  "purificacion": false,
+  "vending": false,
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA",
+    "valor": "$85,000",
+    "y": 5342.861328125,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$104,492",
+    "y": 5542.416015625,
+    "x": 722.01318359375
+   }
+  ],
+  "precios_layout": "simple",
+  "alcalina": false,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/ventana-croquetas-carac1.webp",
+    "w": 146,
+    "h": 152
+   },
+   {
+    "src": "assets/img/equipos/ventana-croquetas-carac2.webp",
+    "w": 74,
+    "h": 158
+   },
+   {
+    "src": "assets/img/equipos/ventana-croquetas-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/ventana-croquetas-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 671,
+  "diagrama": "assets/img/equipos/ventana-croquetas-componentes.webp",
+  "diagrama_size": [
+   1342,
+   1674
+  ],
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/ventana-croquetas-garantia.webp"
+ },
+ "ventana-duo": {
+  "slug": "ventana-duo",
+  "key": "VENTANA_DUO",
+  "producto_box": [
+   1480,
+   363,
+   1812,
+   1192
+  ],
+  "producto": "assets/img/equipos/ventana-duo-producto.webp",
+  "producto_size": [
+   700,
+   1768
+  ],
+  "hero_top": 271,
+  "hero_h": 6531,
+  "titulo": [
+   "VENTANA DÚO",
+   "HIELO Y AGUA"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "La Ventana Dúo es una solución vending diseñada para negocios que ya cuentan con un sistema de purificación de agua y desean ampliar sus oportunidades comerciales mediante la venta automatizada de agua purificada y hielo a granel.",
+   "Al aprovechar la infraestructura existente, puedes incorporar un punto de despacho que permita ofrecer ambos productos las 24 horas del día, incluso fuera del horario habitual de tu establecimiento. Su configuración integra una ventana de despacho de agua y una fabricadora de hielo, permitiéndote diversificar tu oferta sin necesidad de adquirir un sistema de purificación adicional."
+  ],
+  "hero_colores": {
+   "izq": "#073fa1",
+   "der": "#0155ed",
+   "brillo": "#0458d5",
+   "arriba": "#0351d6"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "APROVECHA",
+     "TU SISTEMA",
+     "DE PURIFICACIÓN"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "FABRICA HASTA",
+     "450 KG DE HIELO",
+     "EN 24 HORAS"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "Cada componente desempeña una función dentro de la operación general del equipo, desde la purificación del agua hasta el despacho de los productos. La integración de estos elementos permite concentrar diferentes procesos en una misma solución vending, con una configuración diseñada para aplicaciones comerciales.",
+   "En el siguiente esquema se identifican los principales componentes que conforman la ventana DÚO."
+  ],
+  "componentes_etiquetas": [
+   "Display",
+   "a color",
+   "Lector de tarjetas",
+   "bancarias",
+   "(Opcional)",
+   "Billetero (Opcional)",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Salida de hielo",
+   "Despachador manual de hielo",
+   "a granel",
+   "Sensor de Cashback",
+   "Salida de agua"
+  ],
+  "purificacion": false,
+  "vending": false,
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 450 KG",
+    "valor": "$221,000",
+    "y": 5316.76025390625,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$271,671",
+    "y": 5351.82080078125,
+    "x": 1243.107421875
+   },
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 220 KG",
+    "valor": "$204,000",
+    "y": 5542.28662109375,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$250,774",
+    "y": 5577.4453125,
+    "x": 1243.0439453125
+   }
+  ],
+  "precios_layout": "doble",
+  "alcalina": true,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/ventana-duo-carac1.webp",
+    "w": 88,
+    "h": 152
+   },
+   {
+    "src": "assets/img/equipos/ventana-duo-carac2.webp",
+    "w": 112,
+    "h": 156
+   },
+   {
+    "src": "assets/img/equipos/ventana-duo-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/ventana-duo-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 558,
+  "diagrama": "assets/img/equipos/ventana-duo-componentes.webp",
+  "diagrama_size": [
+   1115,
+   1676
+  ],
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/ventana-duo-garantia.webp"
+ },
+ "ventana-hielo": {
+  "slug": "ventana-hielo",
+  "key": "VENTANA_HIELO",
+  "producto_box": [
+   1480,
+   362,
+   1811,
+   1192
+  ],
+  "producto": "assets/img/equipos/ventana-hielo-producto.webp",
+  "producto_size": [
+   700,
+   1786
+  ],
+  "hero_top": 271,
+  "hero_h": 6251,
+  "titulo": [
+   "VENTANA",
+   "DE HIELO"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Equipo vending automatizado para la venta de hielo a granel. Su configuración integra una fabricadora de hielo con un sistema que permite comercializar el producto por la cantidad correspondiente al monto ingresado.",
+   "El equipo puede configurarse con fabricadoras de distintas capacidades de producción, de acuerdo con las necesidades del negocio y la demanda estimada.",
+   "Gracias a su diseño compacto, la Ventana de Hielo puede instalarse en espacios comerciales adecuados ofreciendo una alternativa para incorporar la venta automatizada de hielo a granel."
+  ],
+  "hero_colores": {
+   "izq": "#073fa1",
+   "der": "#0155ed",
+   "brillo": "#0457d4",
+   "arriba": "#0351d6"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "CUBO DE HIELO",
+     "TAMAÑO XXL",
+     "38X38X22 MM"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "FABRICA DE 220 KG",
+     "HASTA 450 KG",
+     "EN 24 HORAS"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "La Ventana de Hielo integra un sistema de despacho con monedero inteligente, display a color y sensor de cashback. Su estructura de acero incorpora una salida para el suministro de hielo y un despachador manual diseñado para la entrega del producto a granel.",
+   "El equipo permite integrar billetero y lector de tarjetas bancarias como accesorios opcionales, adaptando su configuración a las necesidades de operación del negocio."
+  ],
+  "componentes_etiquetas": [
+   "Display",
+   "a color",
+   "Lector de tarjetas",
+   "bancarias",
+   "(Opcional)",
+   "Billetero (Opcional)",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Salida de hielo",
+   "Despachador manual de hielo",
+   "a granel",
+   "Sensor de Cashback"
+  ],
+  "purificacion": false,
+  "vending": false,
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 450 KG",
+    "valor": "$217,000",
+    "y": 5316.755859375,
+    "x": 709.7578125
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$266,754",
+    "y": 5351.8173828125,
+    "x": 1227.78857421875
+   },
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA | FABRICADORA 220 KG",
+    "valor": "$199,000",
+    "y": 5542.2841796875,
+    "x": 709.7578125
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$244,628",
+    "y": 5577.44287109375,
+    "x": 1227.72509765625
+   }
+  ],
+  "precios_layout": "doble",
+  "alcalina": false,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/ventana-hielo-carac1.webp",
+    "w": 134,
+    "h": 150
+   },
+   {
+    "src": "assets/img/equipos/ventana-hielo-carac2.webp",
+    "w": 112,
+    "h": 156
+   },
+   {
+    "src": "assets/img/equipos/ventana-hielo-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/ventana-hielo-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 558,
+  "diagrama": "assets/img/equipos/ventana-hielo-componentes.webp",
+  "diagrama_size": [
+   1115,
+   1676
+  ],
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/ventana-hielo-garantia.webp"
+ },
+ "ventana-leguminosas": {
+  "slug": "ventana-leguminosas",
+  "key": "VENTANA_LEGUMINOSAS",
+  "producto_box": [
+   1435,
+   363,
+   1854,
+   1192
+  ],
+  "producto": "assets/img/equipos/ventana-leguminosas-producto.webp",
+  "producto_size": [
+   700,
+   1383
+  ],
+  "hero_top": 271,
+  "hero_h": 6282,
+  "titulo": [
+   "VENTANA",
+   "DE LEGUMINOSAS"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Equipo vending automatizado para la venta de granos y semillas a granel, diseñado para ofrecer hasta cuatro variedades de productos, adaptando la oferta a las preferencias de los consumidores de cada establecimiento.",
+   "Gracias a su diseño compacto puede incorporarse a distintos espacios comerciales, ofreciendo una alternativa para diversificar la oferta de productos a granel.",
+   "Además, puedes complementar el equipo con un despachador opcional de aceite vegetal de cocina a granel, ampliando las categorías de productos disponibles para los consumidores."
+  ],
+  "hero_colores": {
+   "izq": "#408017",
+   "der": "#38b500",
+   "brillo": "#3ca109",
+   "arriba": "#3dac05"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "OFRECE HASTA 4",
+     "TIPOS DE GRANOS",
+     "O SEMILLAS"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "AGREGA",
+     "DESPACHADOR",
+     "DE ACEITE VEGETAL"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "3 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "La Ventana de Leguminosas integra cuatro tolvas de almacenamiento con salidas independientes para dosificar cada variedad de producto. Su estructura de acero incorpora ventanas de exhibición que facilitan la supervisión de los niveles de abastecimiento, junto con los mecanismos de control y despacho.",
+   "Esta configuración reúne almacenamiento, exhibición y suministro en una unidad compacta para la venta automatizada a granel."
+  ],
+  "componentes_etiquetas": [
+   "Lector de tarjetas",
+   "bancarias (Opcional)",
+   "Display",
+   "a color",
+   "Monedero inteligente Cobra cualquier",
+   "denominación",
+   "Billetero (Opcional)",
+   "Sensor de Cashback",
+   "Ventanas para exhibición de los productos",
+   "Salida independiente para cada producto",
+   "Despachador de",
+   "aceite vegetal"
+  ],
+  "purificacion": false,
+  "vending": false,
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA",
+    "valor": "$85,000",
+    "y": 5342.861328125,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$104,492",
+    "y": 5542.416015625,
+    "x": 722.01318359375
+   }
+  ],
+  "precios_layout": "simple",
+  "alcalina": false,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/ventana-leguminosas-carac1.webp",
+    "w": 150,
+    "h": 128
+   },
+   {
+    "src": "assets/img/equipos/ventana-leguminosas-carac2.webp",
+    "w": 129,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/ventana-leguminosas-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/ventana-leguminosas-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 671,
+  "diagrama": "assets/img/equipos/ventana-leguminosas-componentes.webp",
+  "diagrama_size": [
+   1342,
+   1674
+  ],
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/ventana-leguminosas-garantia.webp"
+ },
+ "ventana-limpieza": {
+  "slug": "ventana-limpieza",
+  "key": "VENTANA_LIMPIEZA",
+  "producto_box": [
+   1389,
+   482,
+   1900,
+   1096
+  ],
+  "producto": "assets/img/equipos/ventana-limpieza-producto.webp",
+  "producto_size": [
+   700,
+   760
+  ],
+  "hero_top": 271,
+  "hero_h": 6282,
+  "titulo": [
+   "VENTANA",
+   "DE LIMPIEZA"
+  ],
+  "hero_card": [
+   595,
+   757,
+   1974,
+   1240
+  ],
+  "hero_parrafos": [
+   "Equipo vending automatizado para la venta de productos de limpieza a granel, diseñado para comercializar hasta seis productos diferentes adaptando la selección de productos a las necesidades de tus clientes.",
+   "Su sistema incorpora bombas especializadas para el manejo de líquidos viscosos y semiviscosos, ofreciendo una solución diseñada para la dosificación de diferentes tipos de productos de limpieza.",
+   "La Ventana de Limpieza permite incorporar una alternativa de venta a granel que promueve el reúso de envases y reduce la necesidad de empaques desechables."
+  ],
+  "hero_colores": {
+   "izq": "#5e0fc5",
+   "der": "#9350fd",
+   "brillo": "#943ce9",
+   "arriba": "#883eec"
+  },
+  "caracteristicas": [
+   {
+    "texto": [
+     "OFRECE HASTA 6",
+     "DIFERENTES TIPOS",
+     "DE CROQUETAS"
+    ],
+    "rect": [
+     654,
+     1745,
+     924,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "EVITA EL GOTEO",
+     "DE PRODUCTO",
+     "HASTA UN 90%"
+    ],
+    "rect": [
+     984,
+     1745,
+     1254,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "BONIFICA EL SALDO",
+     "DE TUS CLIENTES",
+     "EN CASHBACK"
+    ],
+    "rect": [
+     1314,
+     1745,
+     1584,
+     2012
+    ]
+   },
+   {
+    "texto": [
+     "2 FORMAS DE PAGO",
+     "SEGÚN TU TIPO",
+     "DE CLIENTE"
+    ],
+    "rect": [
+     1644,
+     1745,
+     1914,
+     2012
+    ]
+   }
+  ],
+  "sub_caracteristicas": "FUNCIONES QUE HACEN ÚNICOS A NUESTROS EQUIPOS AUTOMATIZADOS 24-7",
+  "componentes_bg": "#f2f2f2",
+  "componentes_parrafos": [
+   "La Ventana de Limpieza integra un sistema de dosificación compuesto por seis salidas independientes, respaldadas por bombas especializadas para el manejo de líquidos viscosos y semiviscosos. Cada salida cuenta con boquillas antiderrame diseñadas para reducir el goteo durante el despacho.",
+   "Su estructura incorpora un display de fácil interacción, botones de selección y mecanismos de control que permiten gestionar el despacho de cada producto."
+  ],
+  "componentes_etiquetas": [
+   "Sensor de chasback",
+   "Display",
+   "a color",
+   "Boquillas antiderrame",
+   "Salida independiente para cada producto",
+   "Luz led de cortesía",
+   "Monedero Cobra cualquier",
+   "denominación",
+   "Billetero (Opcional)"
+  ],
+  "purificacion": false,
+  "vending": false,
+  "cashback": true,
+  "inversion_bg": "#e3f5ff",
+  "precios": [
+   {
+    "tipo": "lista",
+    "etiqueta": "PRECIO DE LISTA",
+    "valor": "$59,000",
+    "y": 5342.861328125,
+    "x": 722.01318359375
+   },
+   {
+    "tipo": "meses",
+    "etiqueta": "PRECIO DE MESES",
+    "valor": "$72,532",
+    "y": 5542.416015625,
+    "x": 722.01318359375
+   }
+  ],
+  "precios_layout": "simple",
+  "alcalina": false,
+  "nota_precio": "1.PRECIO DIFERIDO HASTA EN 12 MESES PAGANDO CON TARJETAS DE CREDITO PARTICIPANTES. PRECIOS INCLUYEN IVA.",
+  "nota_cashback": "*TE RECOMENDAMOS ABONAR UN 10% DE CASHBACK EN HIELO Y AGUA.",
+  "iconos": [
+   {
+    "src": "assets/img/equipos/ventana-limpieza-carac1.webp",
+    "w": 130,
+    "h": 157
+   },
+   {
+    "src": "assets/img/equipos/ventana-limpieza-carac2.webp",
+    "w": 72,
+    "h": 151
+   },
+   {
+    "src": "assets/img/equipos/ventana-limpieza-carac3.webp",
+    "w": 145,
+    "h": 149
+   },
+   {
+    "src": "assets/img/equipos/ventana-limpieza-carac4.webp",
+    "w": 100,
+    "h": 147
+   }
+  ],
+  "diagrama_w": 654,
+  "diagrama": "assets/img/equipos/ventana-limpieza-componentes.webp",
+  "diagrama_size": [
+   1308,
+   1014
+  ],
+  "cinta_color": "#0156ef",
+  "cinta_w": 274,
+  "cinta": "assets/img/equipos/ventana-limpieza-garantia.webp"
+ }
+}
