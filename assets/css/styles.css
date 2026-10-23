@@ -679,6 +679,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .fr-products .round-arrow:hover { transform: translateY(-50%) scale(1.08); }
 .fr-products .round-arrow.prev { left: 0; }
 .fr-products .round-arrow.next { right: 0; }
+/* Bucle infinito: la pista corre con transform dentro de .loop-view (la crea main.js) */
+.loop-view { overflow: hidden; }
+[data-loop] .track { overflow: visible; scroll-snap-type: none; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; will-change: transform; }
+[data-loop] .track:active { cursor: grabbing; }
+[data-loop] .track img { -webkit-user-drag: none; pointer-events: none; }
 
 /* Inversión con múltiples oportunidades (reutiliza .steps6) */
 .fr-invest li { background: var(--sky); }

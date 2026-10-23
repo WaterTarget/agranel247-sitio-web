@@ -229,31 +229,45 @@ function initLoops() {
     const track = $(".track", root);
     const items = [...track.children];
     if (items.length < 2) return;
-    // Segunda copia de las tarjetas: al terminar la primera, la rotación continúa sin saltos visibles
+    // Ventana recortada + segunda copia de las tarjetas: la pista corre sin fin y sin saltos visibles
+    const view = document.createElement("div");
+    view.className = "loop-view";
+    track.before(view); view.appendChild(track);
     items.forEach((el) => { const c = el.cloneNode(true); c.setAttribute("aria-hidden", "true"); track.appendChild(c); });
-    const period = () => track.children[items.length].offsetLeft - items[0].offsetLeft;
-    const step = () => items[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0);
-    const jump = (left) => { track.style.scrollBehavior = "auto"; track.scrollLeft = left; track.style.scrollBehavior = ""; };
-    const wrap = () => { const p = period(); if (track.scrollLeft >= p - 2) jump(track.scrollLeft - p); };
-    let timer, hold = false, visible = false, t;
-    const move = (dir) => {
-      clearTimeout(t); wrap(); // el ajuste de vuelta pendiente se hace antes de moverse para no cancelar la animación
-      const s = step();
-      if (dir < 0 && track.scrollLeft < s - 2) jump(track.scrollLeft + period());
-      track.scrollBy({ left: dir * s, behavior: "smooth" });
+    let period = 0, step = 0;
+    const measure = () => {
+      period = track.children[items.length].offsetLeft - items[0].offsetLeft;
+      step = items[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0);
     };
+    measure();
+    new ResizeObserver(measure).observe(view);
+
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const play = () => { clearInterval(timer); if (!reduce && !hold && visible) timer = setInterval(() => move(1), +(root.dataset.interval || 2600)); };
-    $("[data-prev]", root)?.addEventListener("click", () => { move(-1); play(); });
-    $("[data-next]", root)?.addEventListener("click", () => { move(1); play(); });
-    track.addEventListener("scroll", () => { clearTimeout(t); t = setTimeout(wrap, 140); }, { passive: true });
-    // Se detiene mientras el usuario la toca o pasa el mouse, y solo rota cuando está en pantalla
-    root.addEventListener("mouseenter", () => { hold = true; play(); });
-    root.addEventListener("mouseleave", () => { hold = false; play(); });
-    root.addEventListener("touchstart", () => { hold = true; play(); }, { passive: true });
-    root.addEventListener("touchend", () => setTimeout(() => { hold = false; play(); }, 2500), { passive: true });
-    if ("IntersectionObserver" in window) new IntersectionObserver(([en]) => { visible = en.isIntersecting; play(); }).observe(root);
-    else { visible = true; play(); }
+    const secsPerCard = +(root.dataset.speed || 3.2); // una tarjeta cada ~3 s, en movimiento continuo
+    let offset = 0, pending = 0, drag = null, last = 0, raf = 0;
+    const frame = (now) => {
+      const dt = Math.min((now - last) / 1000, 0.05); last = now;
+      if (!drag && !reduce) offset += (step / secsPerCard) * dt;
+      if (pending) { const d = Math.abs(pending) < 0.5 ? pending : pending * Math.min(1, dt * 7); offset += d; pending -= d; } // flechas: salto suave
+      if (period) offset = ((offset % period) + period) % period;
+      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+      raf = requestAnimationFrame(frame);
+    };
+    const start = () => { if (!raf) { last = performance.now(); raf = requestAnimationFrame(frame); } };
+    const stop = () => { cancelAnimationFrame(raf); raf = 0; };
+
+    $("[data-prev]", root)?.addEventListener("click", () => (pending -= step));
+    $("[data-next]", root)?.addEventListener("click", () => (pending += step));
+    // Arrastrar con el dedo o el mouse también la mueve (el scroll vertical de la página sigue libre)
+    track.addEventListener("pointerdown", (e) => { drag = { x: e.clientX }; track.setPointerCapture(e.pointerId); });
+    track.addEventListener("pointermove", (e) => { if (!drag) return; offset -= e.clientX - drag.x; drag.x = e.clientX; });
+    const release = () => (drag = null);
+    track.addEventListener("pointerup", release);
+    track.addEventListener("pointercancel", release);
+
+    // Solo se anima mientras la sección está en pantalla
+    if ("IntersectionObserver" in window) new IntersectionObserver(([en]) => (en.isIntersecting ? start() : stop())).observe(root);
+    else start();
   });
 }
 
@@ -396,7 +410,7 @@ function initDiffCards() {
   });
 }
 
-/* ---------- Modal de video ---------- */
+/* ---------- Modales (calculadora desde Equipos / video) ---------- */
 let lastFocus = null;
 function openModal(html, { cls = "", title = "" } = {}) {
   let m = $("#modal");
@@ -427,7 +441,15 @@ function openModal(html, { cls = "", title = "" } = {}) {
   $(".close", m).focus();
 }
 function openVideo(src) { openModal(`<video src="${src}" controls autoplay playsinline></video>`, { cls: "video", title: "Video" }); }
+function openCalculator() {
+  openModal('<iframe src="calculadora-roi.html" title="Calculadora ROI A Granel 24/7"></iframe>', { title: "Calculadora ROI A Granel 24/7" });
+}
 function initModals() {
+  // Botones con data-open-calculator abren la calculadora en pop-up (el menú lleva a la página completa)
+  $$("[data-open-calculator]").forEach((b) => b.addEventListener("click", (e) => {
+    e.preventDefault();
+    openCalculator();
+  }));
   $$("[data-video-box]").forEach((box) => {
     box.addEventListener("click", () => {
       if (box.classList.contains("playing")) return;
