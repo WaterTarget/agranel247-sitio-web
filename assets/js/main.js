@@ -224,50 +224,55 @@ function bindTrack(wrap) {
 }
 
 /* ---------- Tarjetas en bucle infinito ("5 negocios en uno") ---------- */
+// Siempre se ven tarjetas completas dentro del recuadro: cada paso recorre un lugar
+// y la tarjeta que sale por la izquierda vuelve a entrar al final (y al revés con "anterior").
 function initLoops() {
   $$("[data-loop]").forEach((root) => {
     const track = $(".track", root);
-    const items = [...track.children];
-    if (items.length < 2) return;
-    // Ventana recortada + segunda copia de las tarjetas: la pista corre sin fin y sin saltos visibles
+    if (track.children.length < 2) return;
     const view = document.createElement("div");
     view.className = "loop-view";
     track.before(view); view.appendChild(track);
-    items.forEach((el) => { const c = el.cloneNode(true); c.setAttribute("aria-hidden", "true"); track.appendChild(c); });
-    let period = 0, step = 0;
-    const measure = () => {
-      period = track.children[items.length].offsetLeft - items[0].offsetLeft;
-      step = items[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0);
-    };
-    measure();
-    new ResizeObserver(measure).observe(view);
 
     const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const secsPerCard = +(root.dataset.speed || 3.2); // una tarjeta cada ~3 s, en movimiento continuo
-    let offset = 0, pending = 0, drag = null, last = 0, raf = 0;
-    const frame = (now) => {
-      const dt = Math.min((now - last) / 1000, 0.05); last = now;
-      if (!drag && !reduce) offset += (step / secsPerCard) * dt;
-      if (pending) { const d = Math.abs(pending) < 0.5 ? pending : pending * Math.min(1, dt * 7); offset += d; pending -= d; } // flechas: salto suave
-      if (period) offset = ((offset % period) + period) % period;
-      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
-      raf = requestAnimationFrame(frame);
+    const DURATION = 700;
+    let busy = false, timer = 0;
+    const step = () => track.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0);
+    const slide = (to, done) => {
+      track.style.transition = `transform ${DURATION}ms cubic-bezier(.45, 0, .2, 1)`;
+      track.style.transform = `translate3d(${to}px, 0, 0)`;
+      setTimeout(() => { track.style.transition = "none"; done(); busy = false; }, DURATION + 30);
     };
-    const start = () => { if (!raf) { last = performance.now(); raf = requestAnimationFrame(frame); } };
-    const stop = () => { cancelAnimationFrame(raf); raf = 0; };
+    const next = () => {
+      if (busy) return; busy = true;
+      slide(-step(), () => { track.appendChild(track.firstElementChild); track.style.transform = "none"; });
+    };
+    const prev = () => {
+      if (busy) return; busy = true;
+      track.style.transition = "none";
+      track.prepend(track.lastElementChild);
+      track.style.transform = `translate3d(${-step()}px, 0, 0)`;
+      track.getBoundingClientRect(); // aplica la posición inicial antes de animar
+      slide(0, () => (track.style.transform = "none"));
+    };
+    const play = () => { clearInterval(timer); timer = 0; if (!reduce) timer = setInterval(next, +(root.dataset.interval || 2600)); };
+    const stop = () => { clearInterval(timer); timer = 0; };
 
-    $("[data-prev]", root)?.addEventListener("click", () => (pending -= step));
-    $("[data-next]", root)?.addEventListener("click", () => (pending += step));
-    // Arrastrar con el dedo o el mouse también la mueve (el scroll vertical de la página sigue libre)
-    track.addEventListener("pointerdown", (e) => { drag = { x: e.clientX }; track.setPointerCapture(e.pointerId); });
-    track.addEventListener("pointermove", (e) => { if (!drag) return; offset -= e.clientX - drag.x; drag.x = e.clientX; });
-    const release = () => (drag = null);
-    track.addEventListener("pointerup", release);
-    track.addEventListener("pointercancel", release);
+    $("[data-prev]", root)?.addEventListener("click", () => { prev(); play(); });
+    $("[data-next]", root)?.addEventListener("click", () => { next(); play(); });
+    // Deslizar con el dedo o el mouse también la mueve (el scroll vertical de la página sigue libre)
+    let x0 = null;
+    track.addEventListener("pointerdown", (e) => (x0 = e.clientX));
+    track.addEventListener("pointerup", (e) => {
+      if (x0 === null) return;
+      const dx = e.clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); play(); }
+    });
+    track.addEventListener("pointercancel", () => (x0 = null));
 
-    // Solo se anima mientras la sección está en pantalla
-    if ("IntersectionObserver" in window) new IntersectionObserver(([en]) => (en.isIntersecting ? start() : stop())).observe(root);
-    else start();
+    // Solo rota mientras la sección está en pantalla
+    if ("IntersectionObserver" in window) new IntersectionObserver(([en]) => (en.isIntersecting ? play() : stop())).observe(root);
+    else play();
   });
 }
 

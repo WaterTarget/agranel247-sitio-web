@@ -679,10 +679,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .fr-products .round-arrow:hover { transform: translateY(-50%) scale(1.08); }
 .fr-products .round-arrow.prev { left: 0; }
 .fr-products .round-arrow.next { right: 0; }
-/* Bucle infinito: la pista corre con transform dentro de .loop-view (la crea main.js) */
+/* Bucle infinito: las tarjetas rotan dentro de .loop-view (la crea main.js), siempre completas */
 .loop-view { overflow: hidden; }
-[data-loop] .track { overflow: visible; scroll-snap-type: none; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; will-change: transform; }
-[data-loop] .track:active { cursor: grabbing; }
+[data-loop] .track { overflow: visible; scroll-snap-type: none; touch-action: pan-y; user-select: none; -webkit-user-select: none; will-change: transform; }
 [data-loop] .track img { -webkit-user-drag: none; pointer-events: none; }
 
 /* Inversión con múltiples oportunidades (reutiliza .steps6) */
@@ -735,7 +734,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .fr-products { padding-inline: 0; }
   .fr-products .round-arrow { display: none; }
   .fr-products .track { gap: 12px; padding-inline: 4px; }
-  .fr-products .fr-prod { flex-basis: 44%; }
+  .fr-products .fr-prod { flex-basis: calc((100% - 12px) / 2); }
   .fr-combos .product-card { flex-basis: 82%; }
   .fr-includes { padding: 70px 0 40px; }
   .fr-includes .float-icon { width: 96px; min-width: 0; top: -56px; right: 6px; }
@@ -1109,7 +1108,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .pg-franq .hero-overlay .h-hero { line-height: 1.09; }
 .pg-franq .hero-overlay .h-hero-sub { line-height: 1.2; margin-top: calc(10 * var(--u)); }
 .pg-franq .hero + .section { margin-top: calc(141 * var(--u)); }
-.pg-franq .fr-products { width: calc(1262 * var(--u)); padding-inline: 0; margin-top: calc(80 * var(--u)); }
+.pg-franq .fr-products { width: calc(1264 * var(--u)); padding-inline: 0; margin-top: calc(80 * var(--u)); }
 .pg-franq .fr-products .track { gap: calc(60 * var(--u)); padding: 0; }
 .pg-franq .fr-products .fr-prod { flex: 0 0 calc(271 * var(--u)); aspect-ratio: 271 / 390; justify-content: flex-start; gap: 0; padding: calc(24 * var(--u)) calc(10 * var(--u)) calc(51 * var(--u)); }
 .pg-franq .fr-products .fr-prod .diff-icon { width: calc(223 * var(--u)); margin: 0 0 auto; }
@@ -1434,7 +1433,7 @@ main p, main li, .acc-q, .form label { letter-spacing: -0.01em; }
 @media (max-width: 680px) {
   .pg-franq .fr-products { padding-inline: 0; }
   .pg-franq .fr-products .track { gap: 12px; }
-  .pg-franq .fr-products .fr-prod { flex-basis: 44%; }
+  .pg-franq .fr-products .fr-prod { flex-basis: calc((100% - 12px) / 2); }
   .pg-franq .fr-combos .product-card { flex-basis: 82%; }
   .pg-franq .fr-includes .float-icon { width: 150px; top: -78px; }
   .pg-franq .fr-includes .h-section { padding-right: 110px; }
