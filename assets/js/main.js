@@ -439,6 +439,13 @@ function initMapAnimation() {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   sections.forEach((sec) => {
+    // Safari no reproduce video con transparencia (WebM VP9): ahí se muestra la imagen fija del mapa
+    const map = $(".map", sec);
+    if (map && map.tagName === "VIDEO" && !map.canPlayType('video/webm; codecs="vp9"')) {
+      const img = new Image();
+      img.className = "map"; img.src = map.getAttribute("poster"); img.alt = map.getAttribute("aria-label") || "";
+      map.replaceWith(img);
+    }
     // El mapa solo muestra el movimiento propio del video; aquí solo se animan textos y contadores.
     const title = $(".h-section", sec);
     const sub = $(".h-sub", sec);

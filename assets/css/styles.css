@@ -950,9 +950,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 .action .round-arrow { width: calc(60 * var(--u)); height: calc(60 * var(--u)); }
 
 /* Impulsando negocios: mapa 970 × 728 desde x = 154; texto alineado arriba */
-.reach { margin-top: calc(184 * var(--u)); grid-template-columns: calc(667 * var(--u)) 1fr; gap: 0; align-items: start; }
-.reach .map-wrap { width: calc(970 * var(--u)); max-width: none; margin-left: calc(-146 * var(--u)); justify-self: start; aspect-ratio: 970 / 728; }
-.reach .text { position: relative; z-index: 1; padding-top: calc(54 * var(--u)); }
+/* Mapa como estaba antes (preferencia del cliente): en su propia columna, sin tocar el título */
+.reach { margin-top: calc(184 * var(--u)); grid-template-columns: 1fr 1fr; gap: calc(60 * var(--u)); align-items: center; }
+.reach .map-wrap { width: 100%; max-width: calc(680 * var(--u)); margin-left: 0; justify-self: center; aspect-ratio: 4 / 3; }
+.reach .text { position: relative; z-index: 1; padding-top: 0; }
 .reach .h-section { font-size: calc(55 * var(--u)); }
 .reach .h-sub { margin-top: calc(64 * var(--u)); font-size: max(13px, calc(25 * var(--u))); }
 .stat { margin-top: calc(48 * var(--u)); color: #f98512; }
